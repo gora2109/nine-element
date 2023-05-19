@@ -1,0 +1,460 @@
+// Базовые стили
+// Контейнер
+.container
+  width: 100%
+  max-width: 1330px
+  //margin: 0 auto
+  //padding: 0 16px
+  //@include mediaMaxWidthTabMobile
+  //  padding: 0 12px
+  //  max-width: 100%
+//// Сетка
+//.row
+//  display: flex
+//  height: 100%
+//  flex-wrap: wrap
+//  width: calc(100% + 32px)
+//  margin: 0 -16px
+//  &.row_justify-content-between
+//    justify-content: space-between
+//  @include mediaMaxWidthTablet
+//    width: calc(100% + 24px)
+//    margin: 0 -12px
+//.col
+//  display: flex
+//  flex-direction: column
+//  padding: 0 16px
+//  box-sizing: border-box
+//  @include mediaMaxWidthTablet
+//    padding: 0 12px
+//  &.col_1
+//    width: 8.3333%
+//
+//  &.col_2
+//    width: 16.666%
+//
+//  &.col_3
+//    width: 25%
+//
+//  &.col_4
+//    width: 33.3%
+//
+//  &.col_5
+//    width: 41.666667%
+//
+//  &.col_6
+//    width: 50%
+//
+//  &.col_7
+//    width: 58.333333%
+//
+//  &.col_8
+//    width: 66.666667%
+//
+//  &.col_9
+//    width: 75%
+//
+//  &.col_10
+//    width: 83.333333%
+//
+//  &.col_11
+//    width: 91.666667%
+//
+//  &.col_12
+//    width: 100%
+//  @include big-desktop
+//    &.col_big-desktop-2
+//      width: 16.66%
+//    &.col_big-desktop-3
+//      width: 25%
+//    &.col_big-desktop-4
+//      width: 33.3%
+//    &.col_big-desktop-5
+//      width: 41.666667%
+//    &.col_big-desktop-6
+//      width: 50%
+//    &.col_big-desktop-7
+//      width: 58.333333%
+//    &.col_big-desktop-8
+//      width: 66.666667%
+//    &.col_big-desktop-9
+//      width: 75%
+//    &.col_big-desktop-10
+//      width: 83.333333%
+//    &.col_big-desktop-11
+//      width: 91.666667%
+//    &.col_big-desktop-12
+//      width: 100%
+//  @include mediaMaxWidthDesktop
+//    &.col_middle-desktop-2
+//      width: 16.66%
+//    &.col_middle-desktop-3
+//      width: 25%
+//    &.col_middle-desktop-4
+//      width: 33.3%
+//    &.col_middle-desktop-5
+//      width: 41.666667%
+//    &.col_middle-desktop-6
+//      width: 50%
+//    &.col_middle-desktop-7
+//      width: 58.333333%
+//    &.col_middle-desktop-8
+//      width: 66.666667%
+//    &.col_middle-desktop-9
+//      width: 75%
+//    &.col_middle-desktop-10
+//      width: 83.333333%
+//    &.col_middle-desktop-11
+//      width: 91.666667%
+//    &.col_middle-desktop-12
+//      width: 100%
+//  @include desktop
+//    &.col_desktop-2
+//      width: 16.66%
+//    &.col_desktop-3
+//      width: 25%
+//    &.col_desktop-4
+//      width: 33.3%
+//    &.col_desktop-5
+//      width: 41.666667%
+//    &.col_desktop-6
+//      width: 50%
+//    &.col_desktop-7
+//      width: 58.333333%
+//    &.col_desktop-8
+//      width: 66.666667%
+//    &.col_desktop-9
+//      width: 75%
+//    &.col_desktop-10
+//      width: 83.333333%
+//    &.col_desktop-11
+//      width: 91.666667%
+//    &.col_desktop-12
+//      width: 100%
+//  @include mediaMaxWidthTablet
+//    &.col_tab-3
+//      width: 25%
+//    &.col_tab-4
+//      width: 33.3%
+//    &.col_tab-5
+//      width: 41.666667%
+//    &.col_tab-6
+//      width: 50%
+//    &.col_tab-7
+//      width: 58.333333%
+//    &.col_tab-8
+//      width: 66.666667%
+//    &.col_tab-9
+//      width: 75%
+//    &.col_tab-10
+//      width: 83.333333%
+//    &.col_tab-11
+//      width: 91.666667%
+//    &.col_tab-12
+//      width: 100%
+//  @include mediaMaxWidthTabMobile
+//    &.col_mob-3
+//      width: 25%
+//    &.col_mob-4
+//      width: 33.3%
+//    &.col_mob-6
+//      width: 50%
+//    &.col_mob-8
+//      width: 66.666667%
+//    &.col_mob-12
+//      width: 100%
+//  @include mediaMaxWidthMobile
+//    &.col_mob-p-12
+//      width: 100%
+// text
+.text
+  &-center
+    text-align: center
+  &-left
+    text-align: left
+  &-right
+    text-align: right
+  @include big-desktop
+    &-big-desktop
+      &-center
+        text-align: center
+      &-left
+        text-align: left
+      &-right
+        text-align: right
+  @include desktop
+    &-desktop
+      &-center
+        text-align: center
+      &-left
+        text-align: left
+      &-right
+        text-align: right
+  @include mediaMaxWidthDesktop
+    &-middle-desktop
+      &-center
+        text-align: center
+      &-left
+        text-align: left
+      &-right
+        text-align: right
+  @include mediaMaxWidthTablet
+    &-tab
+      &-center
+        text-align: center
+      &-left
+        text-align: left
+      &-right
+        text-align: right
+  @include mediaMaxWidthTabMobile
+    &-mob
+      &-center
+        text-align: center
+      &-left
+        text-align: left
+      &-right
+        text-align: right
+  @include mediaMaxWidthMobile
+    &-mob-p
+      &-center
+        text-align: center
+      &-left
+        text-align: left
+      &-right
+        text-align: right
+//display
+.display
+  &-flex
+    display: flex !important
+  &-block
+    display: block !important
+  &-none
+    display: none !important
+  @include big-desktop
+    &-big-desktop
+      &-flex
+        display: flex !important
+      &-block
+        display: block !important
+      &-none
+        display: none !important
+  @include desktop
+    &-desktop
+      &-flex
+        display: flex !important
+      &-block
+        display: block !important
+      &-none
+        display: none !important
+  @include mediaMaxWidthDesktop
+    &-middle-desktop
+      &-flex
+        display: flex !important
+      &-block
+        display: block !important
+      &-none
+        display: none !important
+  @include mediaMaxWidthTablet
+    &-tab
+      &-flex
+        display: flex !important
+      &-block
+        display: block !important
+      &-none
+        display: none !important
+  @include mediaMaxWidthTabMobile
+    &-mob
+      &-flex
+        display: flex !important
+      &-block
+        display: block !important
+      &-none
+        display: none !important
+  @include mediaMaxWidthMobile
+    &-mob-p
+      &-flex
+        display: flex !important
+      &-block
+        display: block !important
+      &-none
+        display: none !important
+.w
+  &-100
+    width: 100%
+  &-75
+    width: 75%
+  &-50
+    width: 50%
+  &-25
+    width: 25%
+  &-0
+    width: 0
+  @include big-desktop
+    &-big-desktop
+      &-100
+        width: 100%
+      &-75
+        width: 75%
+      &-50
+        width: 50%
+      &-25
+        width: 25%
+      &-0
+        width: 0
+  @include desktop
+    &-desktop
+      &-100
+        width: 100%
+      &-75
+        width: 75%
+      &-50
+        width: 50%
+      &-25
+        width: 25%
+      &-0
+        width: 0
+  @include mediaMaxWidthDesktop
+    &-middle-desktop
+      &-100
+        width: 100%
+      &-75
+        width: 75%
+      &-50
+        width: 50%
+      &-25
+        width: 25%
+      &-0
+        width: 0
+  @include mediaMaxWidthTablet
+    &-tab
+      &-100
+        width: 100%
+      &-75
+        width: 75%
+      &-50
+        width: 50%
+      &-25
+        width: 25%
+      &-0
+        width: 0
+  @include mediaMaxWidthTabMobile
+    &-mob
+      &-100
+        width: 100%
+      &-75
+        width: 75%
+      &-50
+        width: 50%
+      &-25
+        width: 25%
+      &-0
+        width: 0
+  @include mediaMaxWidthMobile
+    &-mob-p
+      &-100
+        width: 100%
+      &-75
+        width: 75%
+      &-50
+        width: 50%
+      &-25
+        width: 25%
+      &-0
+        width: 0
+.h
+  &-100
+    height: 100%
+  &-75
+    height: 75%
+  &-50
+    height: 50%
+  &-25
+    height: 25%
+  &-0
+    height: 0
+  &-auto
+    height: auto
+  @include big-desktop
+    &-big-desktop
+      &-100
+        height: 100%
+      &-75
+        height: 75%
+      &-50
+        height: 50%
+      &-25
+        height: 25%
+      &-0
+        height: 0
+      &-auto
+        height: auto
+  @include desktop
+    &-desktop
+      &-100
+        height: 100%
+      &-75
+        height: 75%
+      &-50
+        height: 50%
+      &-25
+        height: 25%
+      &-0
+        height: 0
+      &-auto
+        height: auto
+  @include mediaMaxWidthDesktop
+    &-middle-desktop
+      &-100
+        height: 100%
+      &-75
+        height: 75%
+      &-50
+        height: 50%
+      &-25
+        height: 25%
+      &-0
+        height: 0
+      &-auto
+        height: auto
+  @include mediaMaxWidthTablet
+    &-tab
+      &-100
+        height: 100%
+      &-75
+        height: 75%
+      &-50
+        height: 50%
+      &-25
+        height: 25%
+      &-0
+        height: 0
+      &-auto
+        height: auto
+  @include mediaMaxWidthTabMobile
+    &-mob
+      &-100
+        height: 100%
+      &-75
+        height: 75%
+      &-50
+        height: 50%
+      &-25
+        height: 25%
+      &-0
+        height: 0
+      &-auto
+        height: auto
+  @include mediaMaxWidthMobile
+    &-mob-p
+      &-100
+        height: 100%
+      &-75
+        height: 75%
+      &-50
+        height: 50%
+      &-25
+        height: 25%
+      &-0
+        height: 0
+      &-auto
+        height: auto

@@ -1,0 +1,91 @@
+.modal
+  &-backdrop
+    background-color: rgba(191, 186, 186, 0.86) !important
+    backdrop-filter: blur(5px)
+    &.in
+      opacity: 1 !important
+  &-lg
+    @include mediaMinWidthDesktop
+      max-width: 1010px
+      width: 100%
+  &-title
+    font-weight: $mainFontWeigth + 600
+    text-transform: uppercase
+  &-content
+    border: none
+    padding: 56px 132px
+    border-radius: 0
+    box-shadow: 2px 2px 8px rgba(94, 94, 94, 0.2)
+    @include mediaMaxWidthDesktop
+      padding: 56px 15px 30px
+  &-header
+    padding: 0
+    margin-bottom: 66px
+    border-bottom: none
+    .title
+      font-family: $titleFont
+    .close
+      position: absolute
+      top: 21px
+      right: 22px
+      opacity: 1
+      border: none
+      &:hover
+        opacity: .2
+        background-color: transparent
+    @include mediaMinWidthDesktop
+      margin-bottom: 30px
+#boc_form
+  .boc_product-input__container
+    margin-bottom: 48px
+    .input-group
+      margin-bottom: 20px
+.rezum-modal
+  .rezum
+    &-banner
+      margin-bottom: 54px
+      img
+        width: 100%
+    &-form
+      .form-group
+        margin: 0 0 20px 0
+      textarea
+        height: 70px
+  .modal
+    &-header
+      height: 0
+      min-height: 0
+      margin-bottom: 0
+      padding: 0
+    &-content
+      padding: 60px 30px
+      @include mediaMinWidthDesktop
+        padding: 97px 94px
+    &-lg
+      @include mediaMinWidthDesktop
+        max-width: 1268px
+        width: 100%
+
+.rezum
+  &-container
+    .title
+      font-weight: $mainFontWeigth + 600
+      font-family: $titleFont
+      &-sub
+        font-weight: $mainFontWeigth + 600
+        font-family: $titleFont
+        margin-bottom: 45px
+.cart-modal
+  .modal
+    &-lg
+      @include mediaMinWidthDesktop
+        width: 1142px
+    &-content
+      padding: 30px
+      @include mediaMinWidthDesktop
+        padding: 56px 69px 83px
+      @include mediaMaxWidthTabMobile
+        padding: 30px 10px
+    &-header
+      .h2
+        font-family: $titleFont

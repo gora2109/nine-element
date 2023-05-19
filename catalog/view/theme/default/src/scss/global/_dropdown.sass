@@ -1,0 +1,63 @@
+.dropdown
+  &-btn
+    position: relative
+    &:after
+      display: inline-block
+      margin-left: 4px
+      vertical-align: middle
+      content: ""
+      border-top: 4px solid
+      border-right: 4px solid transparent
+      border-bottom: 0
+      border-left: 4px solid transparent
+      @include transition
+    &:hover
+      &:after
+        transform: rotate(-180deg)
+  &.active
+    .dropdown-list
+      visibility: visible
+      opacity: 1
+      max-height: 9999px
+    .dropdown-item
+      left: 0
+      opacity: 1
+
+  // Выпадающий список ( Контент )
+  &-list
+    position: absolute
+    top: 100%
+    padding: 0
+    margin: 0
+    list-style: none
+    opacity: 0
+    visibility: hidden
+    background-color: $colorPrimaryLight
+    @include transition
+    @include mediaMaxWidthTablet
+      position: relative
+      left: 0
+      top: 0
+      width: 100%
+      max-height: 0
+  .dropdown-item
+    margin: 0
+    @include mediaMaxWidthTablet
+      position: relative
+      left: -20px
+      opacity: 0
+      @include transition
+      transition-delay: 0.5s
+  .dropdown-link
+    padding: 8px 16px
+    display: block
+    color: $colorTertiary
+    text-decoration: none
+    white-space: nowrap
+    text-transform: uppercase
+    background-color: $colorPrimaryLight
+    @include mediaMaxWidthTablet
+      padding: 8px 24px
+    &:hover
+      color: $colorSecondary
+      background-color: $colorTertiary

@@ -1,0 +1,11 @@
+{% for module in modules %}
+    {% if (home_url == '/' or home_url == '/index.php?route=common/home')%}
+        <div class="home-container">
+            <div class="container">
+                {{ module }}
+            </div>
+        </div>
+    {% else %}
+        {{ module }}
+    {% endif %}
+{% endfor %}

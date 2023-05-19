@@ -1,0 +1,79 @@
+{% if (home_url == '/' or home_url == '/index.php?route=common/home') %}
+{#{% if (route == 'common/home') %}#}
+  <div class="row">
+      <div class="col-sm-12">
+          <div class="category-list">
+              {% for category in home_categories %}
+                  {% if category.id != '67' %}
+{#                      {{ category.id }}#}
+                      <div class="category-item">
+                          <a href="{{ category.href }}" class="category-link" {% if category.image2 != '' %} style="background-image: url('/image/{{ category.image2 }}')"{% endif %}>
+                              {{ category.name }}
+                          </a>
+                      </div>
+                  {% endif %}
+                  {% if category.children %}
+                      {% for child in category.children %}
+                          <div class="category-item">
+                              <a href="{{ child.href }}" class="category-link" {% if child.image2 != '' %} style="background-image: url('/image/{{ child.image2 }}')"{% endif %}>
+                                  {{ child.name }}
+                              </a>
+                          </div>
+                      {% endfor %}
+                  {% endif %}
+              {% endfor %}
+          </div>
+      </div>
+  </div>
+{% elseif (route == 'product/category') %}
+    <div class="catalog-list">
+        {% for category in categories %}
+            <ul>
+                {% if category.category_id == category_id %}
+                    {% if category.category_id == '67'%}
+                        <li><a href="{{ category.href }}" class="catalog-item active">{{ shop_name }}</a></li>
+                    {% else %}
+                        <li><a href="{{ category.href }}" class="catalog-item active">{{ category.name }}</a></li>
+                    {% endif %}
+                    {% if category.children %}
+                        {% for child in category.children %}
+                            {% if child.category_id == child_id %}
+                                <li><a href="{{ child.href }}" class="catalog-item active">{{ child.name }}</a></li>
+                            {% else %}
+                                <li><a href="{{ child.href }}" class="catalog-item">{{ child.name }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% else %}
+                    {% if category.category_id == '67'%}
+                        <li><a href="{{ category.href }}" class="catalog-item">{{ shop_name }}</a></li>
+                    {% else %}
+                        <li><a href="{{ category.href }}" class="catalog-item">{{ category.name }}</a></li>
+                    {% endif %}
+
+                {% endif %}
+            </ul>
+        {% endfor %}
+    </div>
+{% else %}
+    {{ url }}
+    {{ home_url }}
+    <div class="list-group">
+        {% for category in categories %}
+            {% if category.category_id == category_id %}
+                <a href="{{ category.href }}" class="list-group-item active">{{ category.name }}</a>
+                {% if category.children %}
+                    {% for child in category.children %}
+                        {% if child.category_id == child_id %}
+                            <a href="{{ child.href }}" class="list-group-item active">&nbsp;&nbsp;&nbsp;- {{ child.name }}</a>
+                        {% else %}
+                            <a href="{{ child.href }}" class="list-group-item">&nbsp;&nbsp;&nbsp;- {{ child.name }}</a>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% else %}
+                <a href="{{ category.href }}" class="list-group-item">{{ category.name }}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

@@ -1,0 +1,55 @@
+// АККОРДИОН
+.accordion-item
+  margin-bottom: 16px
+  // Включенное состояние
+  &.active
+    .accordion-item__header
+      margin-bottom: 16px
+      background-color: $colorSecondary
+      color: $colorTertiary
+      &:after
+        border-color: $colorTertiary
+        transform: rotate(-45deg)
+        margin-top: 8px
+    .accordion-item__body
+      display: block
+  // Шапка аккордиона
+  .accordion-item__header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    cursor: pointer
+    color: $colorPrimary
+    font-weight: 600
+    font-size: 16px
+    line-height: 24px
+    padding: 16px 24px
+    background-color: $colorTertiaryDark
+    position: relative
+    @include transition
+    .title-text
+      margin-right: 16px
+
+    &:after
+      border-right: 1px solid $colorPrimary
+      border-top: 1px solid $colorPrimary
+      content: ""
+      width: 8px
+      height: 8px
+      transform: rotate(135deg)
+      @include transition
+  // Тело аккордиона
+  .accordion-item__body
+    display: none
+    margin-bottom: 16px
+
+
+
+
+
+
+
+
+
+
+

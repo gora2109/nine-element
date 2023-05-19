@@ -1,0 +1,41 @@
+.contact
+  &-section
+    padding: 163px 0
+  &-banner
+    min-height: 789px
+    padding: 150px 0
+    display: flex
+    align-items: flex-end
+    &__container
+  &-map
+    height: 565px
+  &-row
+    @include mediaMinWidthTablet
+      display: flex
+      flex-wrap: wrap
+
+  &-info
+    @include mediaMinWidthTablet
+      display: flex
+      flex-direction: column
+      justify-content: center
+    &__block
+      margin-bottom: 30px
+    .wysiwyg
+      & > *
+        margin-bottom: 12px
+        &:last-child
+          margin-bottom: 0
+      a
+        text-decoration: none
+  &-form
+    legend
+      color: #231F20
+      margin-bottom: 42px
+      text-transform: uppercase
+.map
+  div
+    &.gmnoprint,
+    &.gm-style-cc,
+    &.gmnoscreen
+      display: none

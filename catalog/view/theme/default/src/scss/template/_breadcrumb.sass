@@ -1,0 +1,33 @@
+.breadcrumb
+  padding: 0
+  background-color: transparent
+  margin: 0
+  margin-bottom: 47px
+  font-size: $mainFontSize - 2
+  line-height: $mainLineHeight - 4
+  font-weight: $mainFontWeigth + 100
+  &>li
+    margin-bottom: 0
+    a
+      color: #BFBABA
+      @include transition
+      &:hover
+        color: #000
+    &:last-child
+      a
+        cursor: default
+        color: #000
+    & + li
+      &:before
+        content: ''
+        display: inline-block
+        width: 6px
+        height: 6px
+        border-color: #BFBABA
+        border-style: solid
+        border-width: 0 1px 1px 0
+        transform: rotate(-45deg)
+        padding: 0
+        margin: 0 20px
+        @include mediaMaxWidthTabMobile
+          margin: 0 10px

@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'kobuzancygroteskgranddark';
+    src: url('../fonts/Cy Grotesk/kobuzancygroteskgranddark.eot');
+    src: url('../fonts/Cy Grotesk/kobuzancygroteskgranddark.eot') format('embedded-opentype'),
+    url('../fonts/Cy Grotesk/kobuzancygroteskgranddark.woff2') format('woff2'),
+    url('../fonts/Cy Grotesk/kobuzancygroteskgranddark.woff') format('woff'),
+    url('../fonts/Cy Grotesk/kobuzancygroteskgranddark.ttf') format('truetype'),
+    url('../fonts/Cy Grotesk/kobuzancygroteskgranddark.svg#kobuzancygroteskgranddark') format('svg');
+}
+/*@font-face {
+    font-family: 'tt_autonomous_trial_variablRg';
+    src: url('../fonts/TT Autonomous/tt_autonomous_trial_variable-webfont.eot');
+    src: url('../fonts/TT Autonomous/tt_autonomous_trial_variable-webfont.eot') format('embedded-opentype'),
+            url('../fonts/TT Autonomous/tt_autonomous_trial_variable-webfont.woff2') format('woff2'),
+    url('../fonts/TT Autonomous/tt_autonomous_trial_variable-webfont.woff') format('woff'),
+    url('../fonts/TT Autonomous/tt_autonomous_trial_variable-webfont.ttf') format('truetype'),
+    url('../fonts/TT Autonomous/tt_autonomous_trial_variable-webfont.svg#tt_autonomous_trial_variablRg') format('svg');
+}*/
+@font-face {
+    font-family: 'tt_autonomous_trial_variabl';
+    src: url('../fonts/TT Autonomous/TT Autonomous Trial Variable.ttf');
+    src: url('../fonts/TT Autonomous/TT Autonomous Trial Variable.ttf') format('truetype');
+    /*src: url('../fonts/TT Autonomous/tt_autonomous_trial_variable-webfont.eot');
+    src: url('../fonts/TT Autonomous/tt_autonomous_trial_variable-webfont.eot') format('embedded-opentype'),
+            url('../fonts/TT Autonomous/tt_autonomous_trial_variable-webfont.woff2') format('woff2'),
+    url('../fonts/TT Autonomous/tt_autonomous_trial_variable-webfont.woff') format('woff'),
+    url('../fonts/TT Autonomous/tt_autonomous_trial_variable-webfont.ttf') format('truetype'),
+    url('../fonts/TT Autonomous/tt_autonomous_trial_variable-webfont.svg#tt_autonomous_trial_variablRg') format('svg');*/
+}

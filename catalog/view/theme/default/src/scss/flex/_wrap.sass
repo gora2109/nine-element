@@ -1,0 +1,32 @@
+// flex-wrap
+.flex-wrap
+  flex-wrap: wrap !important
+  @include mediaMaxWidthDesktop
+    &-desktop
+      flex-wrap: wrap !important
+  @include mediaMaxWidthTablet
+    &-tab
+      flex-wrap: wrap !important
+  @include mediaMaxWidthTabMobile
+    &-mob
+      flex-wrap: wrap !important
+  @include mediaMaxWidthMobile
+    &-mob-p
+      flex-wrap: wrap !important
+
+
+.flex-nowrap
+  flex-wrap: nowrap !important
+  @include mediaMaxWidthDesktop
+    &-desktop
+      flex-wrap: nowrap !important
+  @include mediaMaxWidthTablet
+    &-tab
+      flex-wrap: nowrap !important
+  @include mediaMaxWidthTabMobile
+    &-mob
+      flex-wrap: nowrap !important
+  @include mediaMaxWidthMobile
+    &-mob-p
+      flex-wrap: nowrap !important
+

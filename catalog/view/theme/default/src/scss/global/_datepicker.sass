@@ -1,0 +1,214 @@
+//root datepicker global style
+$datepicker-border: $colorTertiary
+$datepicker-text-color: $colorPrimary
+$datepicker-text-size: $mainFontSize
+$datepicker-text-line-height: $mainLineHeight
+$datepicker-text-weigth: $mainFontWeigth
+$datepicker-button-width: 40px
+$datepicker-icon-width: 32px
+
+//datepicker container styles
+$datepicker-container-padding: 16px
+$datepicker-container-maxWidth: 280px
+$datepicker-container-border-radius: 8px
+
+//datepicker nav button styles
+$datepicker-nav-button-width: $datepicker-button-width
+$datepicker-nav-button-height: $datepicker-nav-button-width
+
+//nav button border-radius
+$datepicker-nav-button-prev-border-radius: $datepicker-container-border-radius
+$datepicker-nav-button-next-border-radius: $datepicker-container-border-radius
+
+//nav button icons
+$datepicker-nav-button-icon-width: $datepicker-icon-width
+$datepicker-nav-button-icon-height: $datepicker-nav-button-icon-width
+$datepicker-nav-button-icon-color: $datepicker-text-color
+$datepicker-nav-button-icon-background-color: transparent
+$datepicker-nav-button-icon-color-hover: $colorTertiary
+$datepicker-nav-button-icon-background-color-hover: $colorSecondaryLight
+
+//nav button title
+$datepicker-nav-title-padding: 0 8px
+$datepicker-nav-title-background-color-hover: $colorSecondaryLight
+$datepicker-nav-title-text-color-hover: $colorTertiary
+
+//datepicker day style
+$datepicker-day-text-color: $colorSecondaryLight
+
+//datepicker cell style
+$datepicker-cell-padding: 8px
+$datepicker-cell-border-radius: 50%
+
+//cell-focus-
+$datepicker-cell-focus-background-color: $colorSecondaryLight
+$datepicker-cell-focus-text-color: $colorTertiary
+
+//cell-current-
+$datepicker-cell-current-border-color: $datepicker-text-color
+$datepicker-cell-current-text-color: $datepicker-text-color
+
+//cell-selected-
+$datepicker-cell-selected-background-color: $datepicker-text-color
+$datepicker-cell-selected-text-color: $colorTertiary
+
+//cell-other-month-
+$datepicker-cell-other-month-text-color: #dedede
+
+//cell-range-
+$datepicker-cell-range-from-border-radius: 50%
+$datepicker-cell-range-to-border-radius: 50%
+$datepicker-cell-range-from-to-background-color: $datepicker-text-color
+$datepicker-cell-range-from-to-text-color: $colorTertiary
+$datepicker-cell-range-background-color: rgba(2, 21, 51, .3)
+$datepicker-cell-range-focus-background-color: rgba(2, 21, 51, .5)
+
+//cell-month-
+$datepicker-cell-month-border-radius: 8px
+//cell-year-
+$datepicker-cell-year-border-radius: 8px
+.air-datepicker
+  box-shadow: 0 3px 16px rgba(0, 0, 0, .05) !important
+  border-radius: $datepicker-container-border-radius
+  border-color: $datepicker-border !important
+  font-family: $mainFont
+  font-weight: $datepicker-text-weigth
+  font-size: $datepicker-text-size
+  line-height: $datepicker-text-line-height
+  overflow: hidden
+  color: $datepicker-text-color
+  padding: $datepicker-container-padding
+  max-width: $datepicker-container-maxWidth
+  width: auto
+  &--pointer
+    display: none
+  &--navigation
+    padding: 0
+  &-nav
+    border-bottom: none
+    &--action
+      width: $datepicker-nav-button-width
+      height: $datepicker-nav-button-height
+      background-color: $datepicker-nav-button-icon-background-color
+      @include transition
+      &[data-action="prev"]
+        border-radius: $datepicker-nav-button-prev-border-radius
+      &[data-action="next"]
+        border-radius: $datepicker-nav-button-next-border-radius
+      svg
+        fill: $datepicker-nav-button-icon-color
+        width: $datepicker-nav-button-icon-width
+        height: $datepicker-nav-button-icon-height
+      path
+        @include transition
+        fill: inherit
+        stroke: inherit
+        stroke-width: inherit
+      &:hover
+        background-color: $datepicker-nav-button-icon-background-color-hover
+        svg
+          fill: $datepicker-nav-button-icon-color-hover
+    &--title
+      max-width: calc(100% - ($datepicker-nav-button-width*2))
+      padding: $datepicker-nav-title-padding
+      width: 100%
+      border-radius: $datepicker-container-border-radius
+      font-weight: $datepicker-text-weigth+100
+      @include transition
+      &:hover
+        background-color: $datepicker-nav-title-background-color-hover
+        color: $datepicker-nav-title-text-color-hover
+  &--content
+    padding: 0
+  &-body
+    &--day
+      &-name
+        color: $datepicker-day-text-color
+        font-size: $datepicker-text-size
+        line-height: $datepicker-text-line-height
+        font-weight: $datepicker-text-weigth+100
+        text-transform: none
+        width: $datepicker-button-width
+        height: $datepicker-button-width
+      &-names
+        margin: 0
+    &--cells
+      &.-days-
+        display: flex
+        flex-wrap: wrap
+  &-cell
+    font-size: $datepicker-text-size
+    line-height: $datepicker-text-line-height
+    font-weight: $datepicker-text-weigth
+    padding: $datepicker-cell-padding
+    border-radius: $datepicker-cell-border-radius
+    &.-day-
+      width: $datepicker-button-width
+      height: $datepicker-button-width
+      &.-other-month-
+        color: $datepicker-cell-other-month-text-color
+    &.-month-
+      border-radius: $datepicker-cell-month-border-radius
+    &.-year-
+      border-radius: $datepicker-cell-year-border-radius
+    &.-focus-
+      background-color: $datepicker-cell-focus-background-color
+      color: $datepicker-cell-focus-text-color
+    &.-current-
+      border: 1px solid $datepicker-cell-current-border-color
+      color: $datepicker-cell-current-text-color
+      &.-focus-
+        border-color: $datepicker-cell-focus-background-color
+        background-color: $datepicker-cell-focus-background-color
+        color: $datepicker-cell-focus-text-color
+      &.-in-range-
+        color: $datepicker-cell-current-text-color
+      &.-range-from-,
+      &.-range-to-
+          background: $datepicker-cell-selected-background-color
+          color: $datepicker-cell-selected-text-color
+    &.-selected-
+      background: $datepicker-cell-selected-background-color
+      color: $datepicker-cell-selected-text-color
+      &.-current-,
+      &.-focus-
+        background: $datepicker-cell-selected-background-color
+        color: $datepicker-cell-selected-text-color
+      &.-other-month-
+        background: $datepicker-cell-selected-background-color !important
+        color: $datepicker-cell-selected-text-color !important
+    &.-range-from-,
+    &.-range-to-
+      position: relative
+      border: none
+      background-color: $datepicker-cell-range-from-to-background-color
+      color: $datepicker-cell-range-from-to-text-color
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        background-color: $datepicker-cell-range-background-color
+        width: 50%
+        z-index: -1
+    &.-range-from-
+      border-radius: $datepicker-cell-range-from-border-radius
+      &:before
+        right: 0
+      &.-range-to-
+        border-radius: $datepicker-cell-range-from-border-radius
+        &:before
+          display: none
+    &.-range-to-
+      border-radius: $datepicker-cell-range-to-border-radius
+      &:before
+        left: 0
+    &.-in-range-
+      background-color: $datepicker-cell-range-background-color
+      &.-other-month-
+        background-color: $datepicker-cell-range-background-color !important
+      &.-focus-
+        background-color: $datepicker-cell-range-focus-background-color
+        &.-current-
+          border-color: $datepicker-cell-selected-background-color
+          color: $datepicker-cell-selected-text-color

@@ -1,0 +1,53 @@
+.home
+  &-banner
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    padding: 225px 0 82px
+    .html-block
+      max-width: 732px
+      text-align: center
+      margin: 0 auto
+  &-section
+    padding: 100px 0
+    .home-container
+      padding: 88px 0
+      &:first-child
+        padding-top: 0
+      &:last-child
+        padding-bottom: 0
+      @include mediaMaxWidthDesktop
+        padding: 44px 0
+    &__top
+      background-image: url("../image/bg-fon-2.jpg")
+      background-position: top left
+      background-size: contain
+      background-repeat: repeat-y
+    &__bottom
+      padding-top: 0
+.home-sale
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  padding: 173px 0
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  @include mediaMinWidthDesktop
+    min-height: 710px
+.home-about
+  padding: 240px 0 225px
+  background-image: url("../image/bg-fon-1.jpg")
+  background-position: top left
+  background-size: contain
+  background-repeat: repeat-y
+  .wysiwyg
+    h1,h2,h3,h4,h5,h6
+      font-family: $mainFont
+    h2
+      line-height: $mainLineHeight + 21
+    a
+      font-weight: 500
+      text-decoration: underline
+  @include mediaMaxWidthDesktop
+    padding: 100px 0

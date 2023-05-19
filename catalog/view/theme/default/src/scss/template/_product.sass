@@ -1,0 +1,365 @@
+.product
+  &-slider
+    position: relative
+    &__container
+      @media screen and (min-width: 1401px)
+        margin-right: calc( -50vw + 1330px/2 + 15px) !important
+        padding-right: calc(50vw - 1330px/2)
+        &:after
+          content: ''
+          background: linear-gradient(270deg, #FFFFFF 19.87%, rgba(255, 254, 253, 0) 100%)
+          position: absolute
+          right: 0
+          top: 0
+          bottom: 0
+          width: calc(50vw - 665px)
+          z-index: 1
+    .product
+      &-thumb
+        margin-bottom: 0
+  &-thumb
+    position: relative
+    margin-bottom: 55px
+    .image
+      border-width: 0 2px 2px 0
+      border-style: dashed
+      border-color: #E5E3DF
+      margin-bottom: 14px
+      img
+        width: 100%
+    .caption
+      h4
+        font-family: $mainFont
+        margin-bottom: 10px
+        color: #000
+        font-size: $mainFontSize
+        line-height: $mainLineHeight - 2
+        a
+      .price
+        color: #CFBBAF
+        &-old
+          text-decoration: line-through
+    .colorswatchbox
+      display: none
+    .button-group
+      display: flex
+      flex-direction: column
+      &__position
+        position: absolute
+        top: 22px
+        right: 22px
+        display: flex
+        flex-direction: column
+        @include transition
+        button, .btn, .boc_order_category_btn
+          margin-bottom: 8px
+          border-color: #CFBBAF
+          background-color: #CFBBAF
+          &:hover
+            background-color: transparent
+    @include mediaMinWidthDesktop
+      .button-group
+        &__position
+          opacity: 0
+          transform: translateX(100%)
+      &:hover
+        .button-group
+          &__position
+            opacity: 1
+            transform: translateX(0)
+
+.shop
+  &-link
+    font-size: $mainFontSize + 8
+    line-height: $mainLineHeight
+    font-weight: $mainFontWeigth + 100
+    text-transform: uppercase
+    display: flex
+    align-items: center
+    justify-content: center
+    @include transition
+    .icon
+      margin-left: 20px
+      width: 62px
+    &:hover
+      color: #000
+      .icon
+        margin-left: 30px
+    &__block
+      position: relative
+      padding: 69px 0
+      background-color: #CFBBAF
+      @include mediaMaxWidthDesktop
+        padding: 34px 0
+.top-slider__section
+  padding: 167px 0 154px
+  @include mediaMaxWidthDesktop
+    padding: 100px 0
+
+
+.product
+  &-cart
+    &__section
+      padding-top: 257px
+      @include mediaMaxWidthTabMobile
+        padding-top: 147px
+    &__image
+
+      #product-cart-slider-thumb
+        .thumbnail
+          border: none
+          border-radius: 0
+          padding: 0
+          img
+            width: 100%
+      #product-cart-slider-images
+        img
+          width: 100%
+
+      &_block
+        @include mediaMaxWidthTablet
+          margin-bottom: 30px
+        @include mediaMinWidthTablet
+          display: flex
+          flex-direction: row-reverse
+          .slider
+            &-thumb
+              max-width: calc(100% - 97px)
+              width: 100%
+            &-images
+              width: 83px
+              margin-right: 14px
+    &__detail
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      .title
+        text-transform: uppercase
+        font-weight: $mainFontWeigth + 300
+        margin-top: 0
+        margin-bottom: 24px
+
+      .rating
+        display: flex
+        &__top
+          margin-bottom: 17px
+        .star
+          display: block
+          .icon
+            width: 33px
+            height: 33px
+            stroke: #CFBBAF
+            &.active
+              fill: #CFBBAF
+      .article
+        font-size: $mainFontSize - 2
+        line-height: $mainLineHeight - 4
+        font-weight: $mainFontWeigth + 100
+        color: #BFBABA
+      .options
+        &.color
+          margin-bottom: 27px
+          .color
+            &__block
+              display: flex
+              flex-wrap: wrap
+              margin: 0 -8px
+            &__item
+              margin: 0 8px
+              label
+                display: block
+                position: relative
+                padding: 0
+                &:before,
+                &:after
+                  display: none
+              input
+                opacity: 0
+                margin: 0
+                &:checked ~ .img-thumbnail
+                  border-color: #0a001f
+              .img-thumbnail
+                padding: 0
+                border-color: #E6E5E4
+                border-radius: 50%
+                display: block
+      .option
+        &__block
+          margin-bottom: 30px
+          .panel
+            &-default
+              box-shadow: none
+              border: none
+              .panel
+                &-heading
+                  padding: 13px 0
+                  background-color: transparent
+                  border: none
+                  border-bottom: 1px solid #D9D9D9
+                &-title
+                  font-family: $mainFont
+                  font-size: $mainFontSize - 2
+                  line-height: $mainLineHeight - 4
+                  font-weight: $mainFontWeigth + 100
+                  a
+                    position: relative
+                    padding-left: 21px
+                    display: block
+                    &:before
+                      content: ''
+                      position: absolute
+                      left: 0
+                      top: calc(50% - 4px)
+                      display: block
+                      width: 6px
+                      height: 6px
+                      border-width: 0 1px 1px 0
+                      border-style: solid
+                      transform: rotate(45deg) translateY(calc(-50% + 4px))
+                      @include transition
+                    &.collapsed
+                      &:before
+                        transform: rotate(-45deg) translateY(calc(-50% + 4px))
+            &-body
+              border-top: none
+      .wysiwyg
+        line-height: $mainLineHeight - 2
+        margin-bottom: 30px
+      .total-block
+        .form-group
+          display: flex
+          align-items: center
+          justify-content: space-between
+          @include mediaMaxWidthMobileTiny
+            flex-wrap: wrap
+          & > *
+            &:not(:last-child)
+              margin-right: 8px
+        .number-spinner
+          min-width: 88px
+          @include mediaMaxWidthMobileTiny
+            min-width: 100%
+            margin-right: 0
+            margin-bottom: 8px
+          #input-quantity
+            border: none
+            background-color: #E5E3DF
+            font-size: $mainFontSize
+            line-height: $mainLineHeight
+            font-weight: $mainFontWeigth + 300
+            height: 48px
+            padding: 0 37px 0 12px
+          .input-group-btn
+            position: absolute
+            right: 1px
+            width: auto
+            z-index: 3
+            &:first-child
+              bottom: 0
+            &:last-child
+              top: 0
+            .btn
+              padding: 0
+              width: 25px
+              height: 24px
+              border: none
+              background-color: #E5E3DF
+              &:focus
+                outline: none
+              &:hover
+                background-color: #000
+                color: #ffffff
+        #button-cart
+          color: $btnTextColorSecondary
+          border-color: $btnBorderColorSecondary
+          background-color: $btnBackgroundColorSecondary
+          height: 48px
+          @include mediaMaxWidthMobileTiny
+            max-width: calc(100% - 114px)
+          &:hover
+            color: $btnTextColorSecondaryHover
+            border-color: $btnBorderColorSecondaryHover
+            background-color: $btnBackgroundColorSecondaryHover
+          &:active
+            color: $btnTextColorSecondaryActive
+            border-color: $btnBorderColorSecondaryActive
+            background-color: $btnBackgroundColorSecondaryActive
+          &:disabled
+            border-color: $btnBorderColorSecondaryDisabled
+            background-color: $btnBackgroundColorSecondaryDisabled
+            color: $btnTextColorSecondaryDisabled
+        .btn-wishlist,
+        .boc_order_btn
+          max-width: 48px
+          width: 100%
+          height: 48px
+          border-color: #CFBBAF
+          background-color: #CFBBAF
+          padding: 2px
+          display: flex
+          align-items: center
+          justify-content: center
+          .icon
+            width: 24px
+            height: 24px
+          &:hover
+            background-color: transparent
+      .list-unstyled
+        margin-left: 0
+        font-size: $mainFontSize + 2
+        line-height: $mainLineHeight + 2
+        font-weight: $mainFontWeigth + 300
+        .old
+          font-size: $mainFontSize - 2
+          line-height: $mainLineHeight - 4
+    &__info
+      margin-top: 90px
+      .nav-tabs
+        border-bottom: 3px solid #D9D9D9
+        display: flex
+        justify-content: space-between
+        margin-left: 0
+        li
+          width: 100%
+          a
+            padding: 27px 10px
+            font-size: $mainFontSize
+            line-height: $mainLineHeight - 2
+            font-weight: $mainFontWeigth + 100
+            color: #000
+            position: relative
+            text-align: center
+            &:before
+              content: ''
+              position: absolute
+              bottom: -3px
+              height: 3px
+              width: 0
+              background-color: #515151
+              left: 50%
+              @include transition
+              opacity: 0
+          &:not(.active)
+            a:hover
+              background-color: transparent
+              border: none
+              &:before
+                left: 0
+                width: 100%
+                opacity: 1
+          &.active
+            a
+              border: none
+              &:before
+                left: 0
+                width: 100%
+                opacity: 1
+      .tab
+        &-content
+        &-pane
+          padding: 145px 0
+      @include mediaMaxWidthTabMobile
+        margin-top: 30px
+        .tab
+          &-pane
+            padding: 60px 0

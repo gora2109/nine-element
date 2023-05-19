@@ -1,0 +1,141 @@
+{{ header }}
+<div class="top-banner contact-banner" style="background-image: url('catalog/view/theme/default/image/contact-banner-1.jpg')">
+  <div class="container">
+    <div class="contact-banner__container">
+      <img src="catalog/view/theme/default/image/contact-banner-2.png" alt="contact-banner-2" title="contact-banner-2">
+    </div>
+  </div>
+</div>
+<section id="information-contact" class="contact-section">
+  <div class="container">
+    <div class="row">{{ column_left }}
+      {% if column_left and column_right %}
+        {% set class = 'col-sm-6' %}
+      {% elseif column_left or column_right %}
+        {% set class = 'col-sm-9' %}
+      {% else %}
+        {% set class = 'col-sm-12' %}
+      {% endif %}
+      <div id="content" class="{{ class }}">{{ content_top }}
+        <div class="row contact-row">
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div class="contact-info">
+              {% if address %}
+                <div class="contact-info__block wysiwyg">
+                  <p>
+                    {{ text_address }}<br/>
+                    <strong><span id="map-1-address">{{ address }}</span></strong>
+                  </p>
+                </div>
+              {% endif %}
+
+              {% if open %}
+                <div class="contact-info__block wysiwyg">
+                  <p>{{ text_open }}
+                    <br />
+                    <strong>{{ open }}</strong>
+                  </p>
+                </div>
+              {% endif %}
+              <div class="contact-info__block wysiwyg">
+                {% if telephone %}
+                  <p><a href="tel:{{ telephone }}">{{ telephone }}</a></p>
+                {% endif %}
+                {% if emails %}
+                  <p><a href="mailto:{{ emails }}">{{ emails }}</a></p>
+                {% endif %}
+              </div>
+              <div class="contact-info__block">
+                <div class="soc">
+                  <ul>
+                    <li>
+                      <a href="#" target="_blank">
+                        <svg class="icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.8269 3.53009C11.6083 2.78764 12.7145 2.53529 13.7629 2.50609C14.8694 2.49634 15.9759 2.50122 17.0821 2.50122C17.087 3.67074 17.087 4.83539 17.0821 6.00492C16.3689 6.00492 15.6505 6.00492 14.9373 6.00492C14.4859 5.97569 14.0201 6.32027 13.9376 6.77169C13.9279 7.55312 13.9328 8.33422 13.9328 9.11562C14.9808 9.1205 16.0292 9.11562 17.0773 9.12049C16.9996 10.251 16.859 11.377 16.694 12.4933C15.7671 12.503 14.8402 12.4933 13.9133 12.4982C13.9035 15.832 13.9181 19.161 13.9084 22.4951C12.5301 22.5 11.1569 22.4902 9.77855 22.5C9.7542 19.1661 9.77855 15.8323 9.76395 12.4982C9.09425 12.4933 8.4197 12.503 7.75 12.4933C7.75488 11.3722 7.75 10.2513 7.75 9.1351C8.4197 9.12537 9.09425 9.13509 9.76395 9.13024C9.78343 8.04319 9.74445 6.95129 9.78343 5.86427C9.85648 4.99582 10.1816 4.12704 10.8269 3.53009Z" fill="black"/>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16.7411 2.5H8.26C5.08068 2.5 2.5 5.08067 2.5 8.23932V16.7792C2.5 19.9204 5.08068 22.5 8.26 22.5H16.74C19.9204 22.5 22.5 19.9204 22.5 16.7596V8.2404C22.5011 5.08068 19.9204 2.5 16.7411 2.5ZM7.3 12.5006C7.3 9.62708 9.63143 7.3 12.5006 7.3C15.3696 7.3 17.7 9.62708 17.7 12.5006C17.7 15.374 15.3686 17.7 12.5006 17.7C9.63143 17.7 7.3 15.374 7.3 12.5006ZM18.2213 7.80067C17.552 7.80067 17.0197 7.2706 17.0197 6.60122C17.0197 5.93182 17.5509 5.40067 18.2213 5.40067C18.8897 5.40067 19.4208 5.93182 19.4208 6.60122C19.4208 7.2706 18.8897 7.80067 18.2213 7.80067Z" fill="black"/>
+                          <path d="M12.4999 9.1001C10.6158 9.1001 9.09961 10.6217 9.09961 12.5004C9.09961 14.3779 10.6158 15.9006 12.4999 15.9006C14.3851 15.9006 15.9002 14.3779 15.9002 12.5004C15.9002 10.6228 14.3622 9.1001 12.4999 9.1001Z" fill="black"/>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22.7373 7.96688C22.5381 6.3946 21.6299 5.4084 20.0177 5.26272C18.1718 5.09597 14.1758 5 12.3223 5C8.53113 5 6.8369 5.0926 5.04405 5.27817C3.3355 5.4547 2.58758 6.21393 2.2936 7.7813C2.08771 8.87967 2 9.9084 2 12.3397C2 14.5236 2.10314 15.8971 2.26273 17.0527C2.48218 18.6397 3.57152 19.5314 5.16787 19.6642C7.0251 19.8189 10.7456 19.8961 12.5851 19.8961C14.3625 19.8961 18.3626 19.8035 20.1411 19.6025C21.733 19.4226 22.4899 18.5723 22.7373 17.0064C22.7373 17.0064 23 15.2911 23 12.3242C23 10.6349 22.8765 9.06375 22.7373 7.96688ZM10.2671 15.3995V9.3626L16.0153 12.3502L10.2671 15.3995Z" fill="black"/>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20.7949 4.39715C20.7949 4.39715 22.6451 3.6757 22.4909 5.42775C22.4395 6.1492 21.977 8.6742 21.6172 11.4053L20.3838 19.4957C20.3838 19.4957 20.281 20.6809 19.3559 20.887C18.4308 21.0931 17.0432 20.1656 16.7862 19.9594C16.5807 19.8049 12.9318 17.4859 11.6469 16.3523C11.2872 16.0431 10.876 15.4247 11.6983 14.7033L17.0946 9.55025C17.7113 8.93185 18.328 7.489 15.7584 9.24105L8.56337 14.1365C8.56337 14.1365 7.7411 14.6518 6.19932 14.188L2.85877 13.1574C2.85877 13.1574 1.62534 12.3844 3.73245 11.6114C8.87177 9.18947 15.1931 6.716 20.7949 4.39715Z" fill="black"/>
+                        </svg>
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <form action="{{ action }}" method="post" enctype="multipart/form-data" class="form-horizontal contact-form">
+              <fieldset>
+                <legend class="h4 text-center">{{ text_contact }}</legend>
+                <div class="col-xs-12">
+                  <div class="form-group required">
+                  <input type="text" name="name" placeholder="{{ entry_name }}" value="{{ name }}" id="input-name" class="form-control" />
+                  {% if error_name %}
+                    <div class="text-danger">{{ error_name }}</div>
+                  {% endif %}
+                </div>
+                </div>
+
+                <div class="col-xs-12">
+                  <div class="form-group required">
+                  <input type="text" placeholder="{{ entry_email }}" name="email" value="{{ email }}" id="input-email" class="form-control" />
+                  {% if error_email %}
+                    <div class="text-danger">{{ error_email }}</div>
+                  {% endif %}
+                </div>
+                </div>
+
+                <div class="col-xs-12">
+                  <div class="form-group ">
+                  <input type="tel" placeholder="{{ entry_phone }}" name="tel" value="{{ tel }}" id="input-tel" class="form-control tel" />
+                </div>
+                </div>
+
+                <div class="col-xs-12">
+                  <div class="form-group required">
+                  <textarea name="enquiry" rows="10" placeholder="{{ entry_enquiry }}" id="input-enquiry">{{ enquiry }}</textarea>
+                  {% if error_enquiry %}
+                    <div class="text-danger">{{ error_enquiry }}</div>
+                  {% endif %}
+                </div>
+                </div>
+
+                {{ captcha }}
+              </fieldset>
+              <div class="buttons">
+                <input class="btn btn-primary btn_secondary w-100 text-uppercase" type="submit" value="{{ button_submit }}" />
+              </div>
+            </form>
+          </div>
+          </div>
+        </div>
+        {{ content_bottom }}</div>
+      {{ column_right }}</div>
+  </div>
+
+</section>
+<div id="map-1" class="map map-container contact-map"></div>
+
+{{ footer }}

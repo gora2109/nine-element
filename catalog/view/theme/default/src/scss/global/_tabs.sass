@@ -1,0 +1,67 @@
+//ТАБЫ
+.tabs
+  &:not(:last-child)
+    margin-bottom: 32px
+  // Переключение табов
+  .tabs-header
+    display: flex
+    border-bottom: 1px solid $colorTertiaryDark
+    margin-bottom: 24px
+    //@include mediaMaxWidthTablet
+    //  background-color: $colorTertiary
+    //  display: block
+    .tabs-header__item
+      &.active
+        .tabs-header__text
+          color: $colorTertiary
+          background-color: $colorSecondary
+    .tabs-header__text
+      display: block
+      cursor: pointer
+      color: $colorPrimary
+      font-weight: 600
+      font-size: 16px
+      line-height: 24px
+      padding: 16px 24px
+      text-align: center
+      position: relative
+      background-color: $colorTertiaryDark
+      white-space: nowrap
+      @include transition
+
+    .slick-next,
+    .slick-prev
+      width: 40px
+      height: 40px
+      &.slick-disabled
+        opacity: .5
+      i
+        font-size: 15px
+        color: $colorPrimary
+  // Тело табов
+  .tabs-body
+    .tabs-body__item
+      width: 100%
+      display: none
+      &.active
+        display: block
+  &.tabs-header__slider
+    .slider-tabs__header
+      height: auto !important
+  &.tabs-vertical
+    @include mediaMinWidthTabMobile
+      display: flex
+      margin: 0 -16px
+      .tabs
+        &-header
+          flex-direction: column
+          max-width: 25%
+          width: 100%
+          padding: 0 16px
+          border-bottom: none
+          &__text
+            text-align: left
+        &-body
+          max-width: 75%
+          width: 100%
+          padding: 0 16px

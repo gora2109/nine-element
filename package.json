@@ -1,0 +1,47 @@
+{
+  "name": "developer",
+  "version": "1.0.0",
+  "description": "developer",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "@fancyapps/ui": "^4.0.31",
+    "@googlemaps/markerclusterer": "^2.0.10",
+    "air-datepicker": "^3.2.1",
+    "bootstrap-input-spinner": "^1.11.3",
+    "chart.js": "^3.9.1",
+    "choices.js": "^10.1.0",
+    "font-awesome": "^4.7.0",
+    "fullpage.js": "^4.0.10",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject-partials": "^1.0.5",
+    "gulp-js-import-file": "^1.0.11",
+    "gulp-minify": "^3.1.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-svg-sprite": "^1.5.0",
+    "imask": "^6.4.2",
+    "jcf": "^1.2.3",
+    "jquery-validation": "^1.19.5",
+    "just-validate": "^3.8.1",
+    "midnight.js": "^1.1.1",
+    "nice-select2": "^2.0.0",
+    "node-sass-x64": "^3.5.6",
+    "plyr": "^3.7.2",
+    "sticky-sidebar": "^3.3.1",
+    "sticky-sidebar-v2": "^1.1.1",
+    "swiper": "8.3.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.54.5",
+    "vanilla-select": "^1.0.25"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "developer",
+  "license": "ISC"
+}

@@ -1,0 +1,59 @@
+$toggleBorderColor: $colorPrimaryLight
+$toggleBorderCheckedColor: $colorSecondary
+
+$toggleBorderColorDisabled: $colorTertiaryLight
+$toggleTextColorDisabled: $colorPrimaryLight
+
+$toggleWidth: 64px
+$toggleHeight: $toggleWidth/2
+$toggleBorderSize: 2
+$toggleBorderWidth: #{$toggleBorderSize}px
+// Стиизация чекбоксов и радиокнопок
+.custom
+  &-toggle
+    display: block
+    position: relative
+    &__input
+      position: absolute
+      opacity: 0
+      &:checked ~ .custom-toggle__text
+        &:before
+          transform: translateX(100%)
+        &:after
+          border-color: $toggleBorderCheckedColor
+          background-color: $toggleBorderColorDisabled
+      &:disabled ~ .custom-toggle__text
+        &:before
+          background-color: $toggleTextColorDisabled
+        &:after
+          border-color: $toggleTextColorDisabled
+    &__text
+      position: relative
+      padding-left: $toggleWidth*1.5
+      display: block
+      cursor: pointer
+      &:before,
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        top: calc(calc(($mainLineHeight - $toggleHeight)/2) - $toggleBorderWidth)
+        border-radius: 50%
+        border: $toggleBorderWidth solid $toggleBorderColor
+        @include transition
+      &:before
+        width: calc($toggleWidth/2 - calc($toggleBorderWidth*2))
+        height: calc($toggleHeight - calc($toggleBorderWidth*2))
+        transform: translateX(0)
+        left: $toggleBorderWidth
+        top: calc(calc(($mainLineHeight - $toggleHeight)/2))
+        background-color: $toggleBorderCheckedColor
+        border-color: $toggleBorderColorDisabled
+        z-index: 2
+      &:after
+        width: $toggleWidth
+        height: $toggleHeight
+        border-radius: $toggleWidth/2
+      &:hover
+        &:after
+          border-color: $toggleBorderCheckedColor

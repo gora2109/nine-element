@@ -1,0 +1,32 @@
+// table
+table
+  border-collapse: collapse
+  border-spacing: 0
+  border: 0
+  width: 100%
+  margin-bottom: 32px
+  table-layout: fixed
+  tr
+    &:nth-child(odd)
+      td
+        background-color: $colorTertiaryDark
+    &:hover
+      td
+        background-color: $colorTertiary
+
+  td, th
+    border-bottom: 1px solid $colorTertiaryLight
+    border-top: 1px solid $colorTertiaryLight
+    color: $colorPrimary
+    font-weight: 400
+    text-align: left
+    padding: 16px
+    background-color: transparent
+    @include transition
+
+
+  th
+    padding: 16px
+    font-weight: 600
+    color: $colorTertiary
+    background-color: $colorSecondary

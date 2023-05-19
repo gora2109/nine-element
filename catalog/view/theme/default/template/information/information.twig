@@ -1,0 +1,127 @@
+{{ header }}
+{% if itCatalog %}
+    <div class="top-banner blog-banner" style="background-image: url('catalog/view/theme/default/image/blog-banner.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10">
+                    <h2 class="title">
+                        {% if info['cat'] %}
+                            {% for cats in  info['cat']%}
+                                {% if cats.category_id == "65" %}
+                                    {{cats.name}}/
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        {{ heading_title }}</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="blog-information__section">
+        <div id="information-information" class="container">
+            {% if info['author'] or info['date_added'] %}
+                <div class="post-info__list">
+                    <ul>
+                        {% if info['author'] %}
+                            <li>{{ info['date_added'] }}</li>
+                        {% endif %}
+                        {% if info['date_added'] %}
+                            <li>{{ info['author'] }}</li>
+                        {% endif %}
+                    </ul>
+                </div>
+            {% endif %}
+            <div class="row">
+                {% if column_left or column_right or related %}
+                    {% set class = 'col-sm-8 col-lg-6' %}
+                {% else %}
+                    {% set class = 'col-sm-12' %}
+                {% endif %}
+                <div id="content" class="{{ class }}">
+                    {{ content_top }}
+
+
+                    <h1 class="h4 blog-information__title">{{ heading_title }}</h1>
+                    <div class="wysiwyg">
+                        <img class="information-image" src="/image/{{ info['thumb'] }}" alt="{{ heading_title }}" title="{{ heading_title }}">
+
+                        {{ info['description'] }}
+
+                        {% if info['cat'] %}
+                            {% for cats in  info['cat']%}
+                                {% if cats.category_id == "65" %}
+                                    <div class="back-to">
+                                        <a href="{{cats.href}}">{{text_back}}</a>
+                                    </div>
+
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+
+
+                    {{ content_bottom }}
+                </div>
+                <div class="col-sm-4 col-lg-5 col-lg-push-1">
+                    {% if related %}
+                        <div class="blog-category blog-category__col">
+                            <h4 class="blog-category-title h4">{{ text_related}}</h4>
+                            {% for item in related %}
+                                <div class="information-layout">
+                                    <div class="information-thumb thumbnail">
+                                        {% if item.thumb %}
+                                            <div class="image">
+                                                <a href="{{ item.href }}">
+                                                    <img src="{{ item.thumb }}" alt="{{ item.title }}" title="{{ item.title }}" class="img-responsive" />
+                                                </a>
+                                            </div>
+                                        {% endif %}
+                                        <div class="caption">
+                                            <h4 class="title"><a href="{{ item.href }}">{{ item.title }}</a></h4>
+                                            <div class="wysiwyg">
+                                                <p>{{ item.description }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {{ column_left }}
+                    {{ column_right }}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+{% else %}
+  <div id="information-information" class="container">
+    <ul class="breadcrumb">
+      {% for breadcrumb in breadcrumbs %}
+        <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+      {% endfor %}
+    </ul>
+    <div class="row">{{ column_left }}
+      {% if column_left and column_right %}
+        {% set class = 'col-sm-6' %}
+      {% elseif column_left or column_right %}
+        {% set class = 'col-sm-9' %}
+      {% else %}
+        {% set class = 'col-sm-12' %}
+      {% endif %}
+      <div id="content" class="{{ class }}">{{ content_top }}
+        <h1>{{ heading_title }}</h1>
+
+        <div class="wysiwyg">
+          {{ description }}
+        </div>
+        {{ content_bottom }}
+      </div>
+      {{ column_right }}</div>
+  </div>
+{% endif %}
+
+{{ footer }}

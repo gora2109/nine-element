@@ -1,0 +1,35 @@
+.pagination
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin: 0
+  li
+    margin: 0 4px
+    &>a,
+    &>span
+      float: none
+      text-align: center
+      font-size: $btnTextSize - 2
+      line-height: $btnLineHeight - 4
+      font-weight: $btnWeight + 100
+      padding: 1px 11px
+      background-color: #ffffff
+      border: 1px solid #E5E3DF
+      color: #000000
+      @include transition
+      border-radius: 0 !important
+      &:hover
+        background-color: #000000
+        border-color: #000000
+        color: #ffffff
+    &.active
+      &>a,
+      &>span
+        background-color: #000000
+        border-color: #000000
+        color: #ffffff
+        &:hover,
+        &:focus
+          background-color: #ffffff
+          border: 1px solid #E5E3DF
+          color: #000000

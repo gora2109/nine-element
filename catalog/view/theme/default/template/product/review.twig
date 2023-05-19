@@ -1,0 +1,64 @@
+{% if reviews %}
+  <div class="review-list">
+    {% for review in reviews %}
+      <div class="review-item">
+        <div class="review-item__image">
+          <img src="catalog/view/theme/default/image/user-review.png">
+        </div>
+        <div class="review-item__description">
+          <div class="review-header">
+            <div class="review-header__title">
+              <span>{{ review.author }}</span>
+              <a href="#">{{ review.author }}</a>
+            </div>
+            <div class="stars">
+              {% for i in 1..5 %}
+                {% if review.rating < i %}
+                  <span class="star">
+                    <svg class="icon" width="33" height="30" viewBox="0 0 33 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.5 1.61804L19.729 11.5557L19.8412 11.9012H20.2045H30.6536L22.2001 18.0431L21.9062 18.2566L22.0184 18.6021L25.2474 28.5398L16.7939 22.3979L16.5 22.1844L16.2061 22.3979L7.7526 28.5398L10.9816 18.6021L11.0938 18.2566L10.7999 18.0431L2.34641 11.9012H12.7955H13.1588L13.271 11.5557L16.5 1.61804Z" stroke="#BFBABA"/>
+                    </svg>
+                  </span>
+                {% else %}
+                  <span class="star">
+                    <svg class="icon active" width="33" height="30" viewBox="0 0 33 30" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.5 0L20.2045 11.4012H32.1924L22.494 18.4476L26.1985 29.8488L16.5 22.8024L6.80154 29.8488L10.506 18.4476L0.807568 11.4012H12.7955L16.5 0Z"/>
+                    </svg>
+                  </span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="review-item__body">
+            <div class="wysiwyg">
+              <p>{{review.text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {#<table class="table table-striped table-bordered">
+      <tr>
+        <td style="width: 50%;"><strong>{{ review.author }}</strong></td>
+        <td class="text-right">{{ review.date_added }}</td>
+      </tr>
+      <tr>
+        <td colspan="2"><p>{{ review.text }}</p>
+          {% for i in 1..5 %}
+          {% if review.rating < i %}
+            <span class="fa fa-stack">
+              <i class="fa fa-star-o fa-stack-2x"></i>
+            </span>
+          {% else %} <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> {% endif %}
+          {% endfor %}</td>
+      </tr>
+    </table>#}
+    {% endfor %}
+  </div>
+<div class="row">
+  <div class="col-sm-6 text-center">{{ pagination }}</div>
+{#  <div class="col-sm-6 text-right">{{ results }}</div>#}
+</div>
+{% else %}
+  <p>{{ text_no_reviews }}</p>
+{% endif %}

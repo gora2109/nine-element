@@ -1,0 +1,132 @@
+{{ header }}
+<section class="section wishlist-section">
+  <div id="account-wishlist" class="container">
+    {#<ul class="breadcrumb">
+      {% for breadcrumb in breadcrumbs %}
+      <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+      {% endfor %}
+    </ul>#}
+    {#{% if success %}
+    <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    {% endif %}#}
+    <h2 class=" title text-center text-uppercase">{{ heading_title }}</h2>
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="content" class="{{ class }}">
+          {#        {{ content_top }}#}
+
+
+          {% if products %}
+
+            {#<div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <td class="text-center">{{ column_image }}</td>
+                    <td class="text-left">{{ column_name }}</td>
+                    <td class="text-left">{{ column_model }}</td>
+                    <td class="text-right">{{ column_stock }}</td>
+                    <td class="text-right">{{ column_price }}</td>
+                    <td class="text-right">{{ column_action }}</td>
+                  </tr>
+                </thead>
+                <tbody>
+                #}
+            <div class="row">
+              {% for product in products %}
+
+                <div class="product-layout product-list col-lg-4 col-md-6 col-xs-12">
+                  <div class="product-thumb transition">
+                    <div class="image"><a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" /></a></div>
+                    <div class="caption">
+                      <h4><a href="{{ product.href }}">{{ product.name }}</a></h4>
+                      {#              <p>{{ product.description }}</p>#}
+                      {#              {% if product.rating %}#}
+                      {#                <div class="rating">{% for i in 1..5 %}#}
+                      {#                    {% if product.rating < i %} <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span> {% else %} <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> {% endif %}#}
+                      {#                  {% endfor %}</div>#}
+                      {#              {% endif %}#}
+                      {% if product.price %}
+                        <p class="price"> {% if not product.special %}
+                            {{ product.price }}
+                          {% else %} <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span> {% endif %}
+                          {#                  {% if product.tax %} <span class="price-tax">{{ text_tax }} {{ product.tax }}</span> {% endif %} </p>#}
+                        </p>
+                      {% endif %} </div>
+                    <div class="button-group__position">
+                    <div class="button-group">
+                      <button class="btn" type="button" onclick="cart.add('{{ product.product_id }}');">
+                        <svg class="icon display-block" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.0625 17.0627C6.61478 17.0627 7.0625 16.615 7.0625 16.0626C7.0625 15.5103 6.61478 15.0625 6.0625 15.0625C5.51022 15.0625 5.0625 15.5103 5.0625 16.0626C5.0625 16.615 5.51022 17.0627 6.0625 17.0627Z" fill="black"/>
+                          <path d="M15.4375 17.0627C15.9898 17.0627 16.4375 16.615 16.4375 16.0626C16.4375 15.5103 15.9898 15.0625 15.4375 15.0625C14.8852 15.0625 14.4375 15.5103 14.4375 16.0626C14.4375 16.615 14.8852 17.0627 15.4375 17.0627Z" fill="black"/>
+                          <path d="M3.5 4.12501H17.1262C17.2178 4.12501 17.3082 4.14511 17.3911 4.18391C17.474 4.2227 17.5474 4.27924 17.606 4.34951C17.6647 4.41979 17.7072 4.5021 17.7306 4.59061C17.7539 4.67912 17.7575 4.77168 17.7412 4.86175L16.3783 12.3618C16.3521 12.5058 16.2762 12.636 16.1639 12.7298C16.0515 12.8236 15.9097 12.875 15.7634 12.875H5.61865C5.47233 12.875 5.33066 12.8237 5.2183 12.73C5.10595 12.6362 5.03003 12.5061 5.00378 12.3621L3.02535 1.51288C2.9991 1.36894 2.92319 1.23877 2.81083 1.14505C2.69847 1.05133 2.5568 1 2.41049 1H1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                      {#              <button type="button" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');">#}
+                      {#                <i class="fa fa-exchange"></i>#}
+                      {#              </button>#}
+                      <button class="btn" type="button" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');">
+                        <svg class="icon display-block" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1_926)">
+                            <path d="M19.3447 6.91082C19.3447 6.91082 19.4072 6.84832 19.5322 6.72332C19.6572 6.59832 19.7197 6.35725 19.7197 6.0001C19.7197 5.64296 19.5947 5.33939 19.3447 5.08939C19.0947 4.83939 18.7911 4.71439 18.434 4.71439C18.0768 4.71439 17.7733 4.83939 17.5233 5.08939C17.2733 5.33939 17.1483 5.64296 17.1483 6.0001C17.1483 6.35725 17.2733 6.66082 17.5233 6.91082C17.7733 7.16082 18.0768 7.28582 18.434 7.28582C18.7911 7.28582 19.0947 7.16082 19.3447 6.91082ZM22.7197 2.14296C22.7197 4.36618 22.3826 6.28805 21.7085 7.90859C21.0344 9.52912 19.9027 11.1385 18.3134 12.7367C17.5902 13.451 16.7197 14.2367 15.7018 15.0939L15.434 20.1697C15.4161 20.3126 15.3447 20.4287 15.2197 20.518L10.0768 23.518C10.0143 23.5537 9.9429 23.5715 9.86254 23.5715C9.7554 23.5715 9.65272 23.5314 9.5545 23.451L8.69736 22.5939C8.58129 22.4689 8.54558 22.326 8.59022 22.1653L9.72861 18.4689L5.96522 14.7055L2.26879 15.8439C2.242 15.8528 2.20183 15.8572 2.14825 15.8572C2.02325 15.8572 1.92058 15.8171 1.84022 15.7367L0.983076 14.8796C0.83129 14.7099 0.808969 14.5358 0.916112 14.3572L3.91611 9.21439C4.0054 9.08939 4.12147 9.01796 4.26433 9.0001L9.34022 8.73225C10.1974 7.71439 10.9831 6.84385 11.6974 6.12064C13.3759 4.451 14.9741 3.29921 16.492 2.66528C18.0099 2.03135 19.934 1.71439 22.2643 1.71439C22.3893 1.71439 22.4965 1.7568 22.5858 1.84162C22.675 1.92644 22.7197 2.02689 22.7197 2.14296Z" fill="black"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1_926">
+                              <rect width="22.2969" height="24" fill="white" transform="matrix(1 0 0 -1 0.84375 24)"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                      <a class="btn" href="{{ product.remove }}" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger">
+                        <svg class="icon display-block" width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0 16V15.8588L6.97603 7.88235L0.671233 0.117647V0H6.54452L10.5719 5.2H10.7158L15.0788 0H20.9041V0.117647L14.3356 7.64706L21 15.8588V16H15.0548L10.7397 10.4706H10.5959L5.94521 16H0Z" fill="black"/>
+                        </svg>
+                      </a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                {#<tr>
+                  <td class="text-center">{% if product.thumb %}<a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" /></a>{% endif %}</td>
+                  <td class="text-left"><a href="{{ product.href }}">{{ product.name }}</a></td>
+                  <td class="text-left">{{ product.model }}</td>
+                  <td class="text-right">{{ product.stock }}</td>
+                  <td class="text-right">{% if product.price %}
+                    <div class="price"> {% if not product.special %}
+                      {{ product.price }}
+                      {% else %} <b>{{ product.special }}</b> <s>{{ product.price }}</s> {% endif %} </div>
+                    {% endif %}</td>
+                  <td class="text-right"><button type="button" onclick="cart.add('{{ product.product_id }}');" data-toggle="tooltip" title="{{ button_cart }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></button>
+                    <a href="{{ product.remove }}" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger"><i class="fa fa-times"></i></a></td>
+                </tr>#}
+              {% endfor %}
+              {#</tbody>
+
+          </table>
+        </div>#}
+            </div>
+          {% else %}
+            <p>{{ text_empty }}</p>
+          {% endif %}
+          {#<div class="buttons clearfix">
+            <div class="pull-right"><a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a></div>
+          </div>#}
+          {#        {{ content_bottom }}#}
+        </div>
+      </div>
+      {#{{ column_left }}
+      {% if column_left and column_right %}
+        {% set class = 'col-sm-6' %}
+      {% elseif column_left or column_right %}
+        {% set class = 'col-sm-9' %}
+      {% else %}
+        {% set class = 'col-sm-12' %}
+      {% endif %}
+
+      {{ column_right }}#}
+    </div>
+  </div>
+</section>
+{{ footer }}

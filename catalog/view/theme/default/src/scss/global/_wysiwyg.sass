@@ -1,0 +1,24 @@
+.wysiwyg
+  img
+    display: block
+    margin: 0 auto 24px
+  ul, ol
+    li
+      margin-bottom: 8px
+      @include mediaMaxWidthTablet
+        padding-left: 24px
+  ul
+    list-style: none
+    ul
+      margin-left: 0
+    li
+      position: relative
+      padding-left: 32px
+      &:before
+        content: "—"
+        left: 8px
+        top: -2px
+        position: absolute
+        @include mediaMaxWidthTablet
+          top: 0
+          left: 0

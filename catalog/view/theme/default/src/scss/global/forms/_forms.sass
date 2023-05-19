@@ -1,0 +1,58 @@
+// Стилизация формы
+$inputSize: $mainFontSize - 2
+$inputLineHeight: $mainLineHeight - 4px
+$inputPadding: 24px 28px
+$inputFontFamily: $mainFont
+$inputFontWeight: 300
+$inputBorderRadius: 0
+$inputPlaceholder: $colorPrimary
+$inputTextColor: $colorPrimaryDark
+
+$inputBorderColor: #BFBABA
+$inputBackgroundColor: transparent
+
+$inputBorderColorHover: $colorPrimary
+$inputBackgroundColorHover: $inputBackgroundColor
+
+$inputBorderColorFocus: $colorPrimaryDark
+$inputBackgroundColorFocus: $colorTertiaryLight
+
+$inputBorderColorDisabled: $colorTertiaryLight
+$inputBackgroundColorDisabled: $colorTertiaryLight
+$inputTextColorDisabled: $colorTertiaryLight
+
+$inputBorderColorError: $colorError
+$inputTextError: $inputSize - 2px
+$inputLineHeightError: $inputLineHeight - 8px
+
+$formFieldMarginBottom: 24px
+$formFieldTitleFontSize: $inputSize
+$formFieldTitleLineHeight: $inputLineHeight - 4px
+$formFieldTitleMarginBottom: $formFieldMarginBottom/3
+
+
+
+@import "_inputs"
+@import "_password"
+@import "_checkRadioBox"
+@import "_toggle"
+@import "_select"
+@import "_number"
+@import "_attach"
+
+@-webkit-keyframes autofill
+  to
+    background: transparent
+input:-webkit-autofill
+  -webkit-animation-name: autofill
+  -webkit-animation-fill-mode: both
+
+// Кастомный скролл
+::-webkit-scrollbar
+  width: 5px
+::-webkit-scrollbar-track
+  background: $colorTertiary
+::-webkit-scrollbar-thumb
+  background-color: $colorSecondary
+  &:hover
+    background-color: $colorSecondaryLight

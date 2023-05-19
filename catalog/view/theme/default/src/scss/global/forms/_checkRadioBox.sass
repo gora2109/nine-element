@@ -1,0 +1,147 @@
+//$checkRadioBoxBorderColor: $colorPrimaryLight
+//$checkRadioBoxBorderCheckedColor: $colorSecondary
+//
+//$checkRadioBoxBorderColorDisabled: $colorTertiaryLight
+//$checkRadioBoxTextColorDisabled: $colorPrimaryLight
+//
+//$checkRadioBoxWidth: 16px
+//$checkRadioBoxHeight: $checkRadioBoxWidth
+//$checkRadioBoxBorderSize: 2
+//$checkRadioBoxBorderWidth: #{$checkRadioBoxBorderSize}px
+//// Стиизация чекбоксов и радиокнопок
+//.custom-check
+//  display: block
+//  position: relative
+//  .custom-check__input
+//    position: absolute
+//    opacity: 0
+//    // Стиизация чекбоксов и радиокнопок ( Активное состояние )
+//    &:checked ~ .custom-check__text
+//      &:before
+//        opacity: 1
+//    &:checked ~ .custom-check__text
+//      &:after
+//        border-color: $checkRadioBoxBorderCheckedColor
+//    // Стиизация чекбоксов и радиокнопок ( Заблокированное состояние )
+//    &:disabled ~ .custom-check__text
+//      color: $checkRadioBoxTextColorDisabled
+//      &:after
+//        border-color: $checkRadioBoxBorderColorDisabled
+//      &:hover
+//        &:after
+//          border-color: $checkRadioBoxBorderColorDisabled
+//  // Стиизация чекбоксов и радиокнопок ( Текст )
+//  .custom-check__text
+//    position: relative
+//    padding-left: $checkRadioBoxWidth*2
+//    display: block
+//    cursor: pointer
+//    &:before,
+//    &:after
+//      content: ''
+//      position: absolute
+//      left: 0
+//      top: calc(($mainLineHeight - $checkRadioBoxWidth)/($checkRadioBoxBorderSize*2))
+//      @include transition
+//    &:before
+//      opacity: 0
+//    &:after
+//      width: $checkRadioBoxWidth
+//      height: $checkRadioBoxHeight
+//      border-radius: 3px
+//      border: $checkRadioBoxBorderWidth solid $checkRadioBoxBorderColor
+//    &:hover
+//      &:after
+//        border-color: $checkRadioBoxBorderCheckedColor
+//
+//  // Стилизация чекбоксов
+//  input[type='checkbox']
+//    & ~ .custom-check__text
+//      &:before
+//        content: "\2713"
+//        background: $checkRadioBoxBorderCheckedColor
+//        color: $colorTertiary
+//        width: $checkRadioBoxWidth
+//        height: $checkRadioBoxHeight
+//        top: calc((($mainLineHeight - $checkRadioBoxWidth)/($checkRadioBoxBorderSize*2) + $checkRadioBoxBorderWidth))
+//        left: $checkRadioBoxBorderWidth
+//        display: flex
+//        justify-content: center
+//        align-items: center
+//  // Стилизация радио-кнопок
+//  input[type='radio']
+//    & ~ .custom-check__text
+//      &:before,
+//      &:after
+//        border-radius: 50%
+//      &:before
+//        width: calc((($checkRadioBoxWidth/2) + $checkRadioBoxBorderWidth))
+//        height: calc((($checkRadioBoxWidth/2) + $checkRadioBoxBorderWidth))
+//        background: $checkRadioBoxBorderCheckedColor
+//        opacity: 0
+//        top: calc(($mainLineHeight - calc((($checkRadioBoxWidth/2) + $checkRadioBoxBorderWidth)))/2)
+//        left: calc(($checkRadioBoxWidth/2 + $checkRadioBoxBorderWidth)/2)
+.checkbox,
+.radio
+  label
+    padding-left: 0
+    span
+      position: relative
+      padding-left: 24px
+      &:before,
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        //top: calc(50% - 8px)
+        top: 3.5px
+        width: 16px
+        height: 16px
+        background-color: #F6F8F9
+        border: 1px solid #B0BABF
+.checkbox
+  input[type='checkbox']
+    opacity: 0
+  label
+    span
+      &:before
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 8px
+        //line-height: 16px
+        //font-size: 14px
+        //font-weight: 300
+        //text-align: center
+        background-color: transparent
+        border: none
+        z-index: 1
+        opacity: 0
+    input[type='checkbox']
+      &:checked ~ span
+        &:before
+          opacity: 1
+        &:after
+          background-color: #B0BABF
+
+.radio
+  input[type='radio']
+    opacity: 0
+  label
+    span
+      &:before
+        border-radius: 50%
+      &:after
+        border-radius: 50%
+        background-color: #B0BABF
+        border: 1px solid #F6F8F9
+        //top: calc(50% - 7px)
+        top: 4.5px
+        width: 14px
+        height: 14px
+        left: 1px
+        opacity: 0
+    input[type='radio']
+      &:checked ~ span
+        &:after
+          opacity: 1

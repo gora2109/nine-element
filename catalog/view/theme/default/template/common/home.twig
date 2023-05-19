@@ -1,0 +1,31 @@
+{{ header }}
+<div class="top-banner home-banner" style="background-image: url('image/catalog/home-banner.jpg')">
+  <div class="container">
+    {{ column_left }}
+  </div>
+</div>
+<div id="common-home">
+{#  <div class="row">#}
+
+    {#{% if column_left and column_right %}
+    {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+    {% set class = 'col-sm-9' %}
+    {% else %}
+    {% set class = 'col-sm-12' %}
+    {% endif %}#}
+    <div id="content" class="{{ class }}">
+        <section class="section home-section home-section__top">
+            {{ content_top }}
+        </section>
+        <section class="section home-section__bottom">
+            {{ content_bottom }}
+        </section>
+
+
+    </div>
+{#    <div class="container"></div>#}
+    {{ column_right }}
+{#  </div>#}
+</div>
+{{ footer }}

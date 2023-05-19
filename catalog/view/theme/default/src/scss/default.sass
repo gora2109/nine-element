@@ -1,0 +1,171 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, button, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font: inherit
+  outline: none
+  vertical-align: baseline
+  box-sizing: border-box
+
+main, article, aside, details, figcaption, figure,
+footer, header, menu, nav, section
+  display: block
+
+html,
+body
+  min-height: 100%
+
+body
+  color: $colorPrimary
+  font-size: $mainFontSize
+  line-height: $mainLineHeight
+  font-family: $mainFont
+  font-weight: $mainFontWeigth
+  -webkit-font-smoothing: antialiased
+  &.show-mob
+    overflow: hidden
+
+.wrapper
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  overflow: hidden
+  overflow-y: auto
+  justify-content: flex-start
+
+
+h1, h2, h3, h4, h5, h6
+  margin: 0 0 24px
+  font-family: $titleFont
+  font-weight: $mainFontWeigth + 300
+  color: $colorPrimaryDark
+
+h1,
+.h1
+  font-size: 40px
+  line-height: 48px
+  @include mediaMaxWidthTabMobile
+    font-size: $mainFontSize + 16
+    line-height: $mainLineHeight + 14
+
+h2,
+.h2
+  font-size: $mainFontSize + 16
+  line-height: $mainLineHeight + 14
+  @include mediaMaxWidthTabMobile
+    font-size: 24px
+    line-height: 36px
+
+h3,
+.h3
+  font-size: 24px
+  line-height: 36px
+  @include mediaMaxWidthTabMobile
+    font-size: 18px
+    line-height: 25px
+
+h4,
+.h4
+  font-size: 18px
+  line-height: 25px
+  @include mediaMaxWidthTabMobile
+    font-size: 14px
+    line-height: 24px
+
+h5,
+.h5
+  font-size: 14px
+  line-height: 24px
+
+h6,
+.h6
+  font-size: 14px
+  line-height: 24px
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a
+  text-decoration: none
+  color: $colorPrimary
+  &:hover
+    color: #CFBBAF
+strong
+  font-weight: $mainFontWeigth + 200
+a
+  color: $colorPrimary
+  text-decoration: none
+  &:focus
+    text-decoration: none
+  &:hover
+    text-decoration: none
+    color: #CFBBAF
+
+ul, p, ol
+  padding: 0
+  margin-bottom: 24px
+
+  &:last-child
+    margin-bottom: 0
+
+p:empty
+  display: none
+
+ul,
+ol
+  margin-left: 24px
+  &
+    ul,ol
+      margin: 8px 0 8px 24px
+  li
+    margin: 0 0 8px
+
+
+img
+  outline: none
+  max-width: 100%
+  object-fit: cover
+  height: auto
+
+//Special Text Elements
+sup,
+.sup
+  font-size: 12px
+  position: relative
+  top: -4px
+
+blockquote,
+blockquote
+  margin-left: 32px
+  padding-left: 16px
+  font-size: 16px
+  line-height: 32px
+  font-style: italic
+  margin-bottom: 32px
+  border-left: 2px solid $colorSecondary
+
+q,
+.q
+  quotes: "\00ab" "\00bb"
+  margin-bottom: 24px
+  display: block
+  q
+    quotes: "\201e" "\201c"
+strong,
+.strong,
+.bold
+  font-weight: $mainFontWeigth + 300

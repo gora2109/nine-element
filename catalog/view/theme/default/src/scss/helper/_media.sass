@@ -1,0 +1,86 @@
+$full-hd-desktop: 1700px
+$hd-desktop: 1520px
+$big-desktop: 1400px
+$desktop: 1200px
+
+$mediaMinWidthDesktop: 1024px
+$mediaMaxWidthDesktop: 1023px
+
+$mediaMinWidthTablet: 992px
+$mediaMaxWidthTablet: 991px
+
+$mediaMinWidthTabMobile: 768px
+$mediaMaxWidthTabMobile: 767px
+
+$mediaMinWidthMobile: 580px
+$mediaMaxWidthMobile: 579px
+
+
+$mediaMinWidthMobileTiny: 420px
+$mediaMaxWidthMobileTiny: 419px
+
+
+/*WidthDesktop-1700*/
+@mixin full-hd-desktop
+  @media (max-width: #{$full-hd-desktop})
+    @content
+
+/*WidthDesktop-1520*/
+@mixin hd-desktop
+  @media (max-width: #{$hd-desktop})
+    @content
+
+/*WidthDesktop-1400*/
+@mixin big-desktop
+  @media (max-width: #{$big-desktop})
+    @content
+
+/*WidthDesktop-1200*/
+@mixin desktop
+  @media (max-width: #{$desktop})
+    @content
+
+/*WidthDesktop-1024*/
+@mixin mediaMinWidthDesktop
+  @media screen and (min-width: #{$mediaMinWidthDesktop})
+    @content
+
+@mixin mediaMaxWidthDesktop
+  @media screen and (max-width: #{$mediaMaxWidthDesktop})
+    @content
+
+/*WidthDesktop-992*/
+@mixin mediaMinWidthTablet
+  @media screen and (min-width: #{$mediaMinWidthTablet})
+    @content
+
+@mixin mediaMaxWidthTablet
+  @media screen and (max-width: #{$mediaMaxWidthTablet})
+    @content
+
+/*WidthDesktop-768*/
+@mixin mediaMinWidthTabMobile
+  @media screen and (min-width: #{$mediaMinWidthTabMobile})
+    @content
+
+@mixin mediaMaxWidthTabMobile
+  @media screen and (max-width: #{$mediaMaxWidthTabMobile})
+    @content
+
+/*WidthDesktop-580*/
+@mixin mediaMinWidthMobile
+  @media screen and (min-width: #{$mediaMinWidthMobile})
+    @content
+
+@mixin mediaMaxWidthMobile
+  @media screen and (max-width: #{$mediaMaxWidthMobile})
+    @content
+
+/*WidthDesktop-420*/
+@mixin mediaMinWidthMobileTiny
+  @media screen and (min-width: #{$mediaMinWidthMobileTiny})
+    @content
+
+@mixin mediaMaxWidthMobileTiny
+  @media screen and (max-width: #{$mediaMaxWidthMobileTiny})
+    @content

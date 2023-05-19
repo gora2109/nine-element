@@ -1,0 +1,19 @@
+<div class="simplecheckout-block" id="simplecheckout_comment">
+    {% if display_header %}
+      <div class="checkout-heading panel-heading">{{ label }}</div>
+    {% endif %}
+    <div class="simplecheckout-block-content">
+        <div class="comment-block">
+            <div class="comment-header">
+                <a role="button" data-toggle="collapse" href="#simplecheckout-comment" aria-expanded="false" aria-controls="simplecheckout-comment">
+                    {{ text_comment_header }}
+                </a>
+
+            </div>
+            <div id="simplecheckout-comment" class="comment-body collapse">
+                <textarea name="comment" id="comment" placeholder="{{ placeholder }}" data-reload-payment-form="true">{{ comment }}</textarea>
+            </div>
+        </div>
+
+    </div>
+</div>

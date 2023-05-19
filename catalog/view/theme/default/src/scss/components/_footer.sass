@@ -1,0 +1,48 @@
+//FOOTER
+.footer
+  margin-top: auto
+  background-color: #E5E3DF
+  //background-image: url("../image/footer-fon.png")
+  background-image: url("../image/footer-fon-2.jpg")
+  background-repeat: repeat-y
+  background-position: right top
+  background-size: contain
+  font-size: $mainFontSize - 2
+  line-height: $mainLineHeight - 4
+  font-weight: $mainFontWeigth + 100
+  &-top
+    padding: 92px 0 44px
+  &-bottom
+    border-top: .5px solid #BFBABA
+    padding: 28px 0 27px
+  .powered
+    color: #BFBABA
+    font-size: $mainFontSize - 4
+    line-height: $mainLineHeight
+  &-info
+    &__block
+      &:not(:last-child)
+        margin-bottom: 30px
+      &.wysiwyg
+        & > *
+          margin-bottom: 12px
+          &:last-child
+            margin-bottom: 0
+        a
+          text-decoration: none
+  &-logo
+  &-col
+    margin-bottom: 30px
+    .title
+      font-family: $mainFont
+      font-weight: $mainFontWeigth + 300
+      margin-bottom: 16px
+  &-menu
+    margin: 0
+    list-style-type: none
+    li
+      &:not(:last-child)
+        margin-bottom: 16px
+      a
+        text-decoration: none
+        @include transition

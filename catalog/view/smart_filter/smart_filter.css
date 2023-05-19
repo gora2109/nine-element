@@ -1,0 +1,312 @@
+
+.accordion {
+
+  margin-top: 40px;
+}
+.accordion .card {
+  border: none;
+ 
+}
+.accordion .card h2 {
+  background: url(https://cdn0.iconfinder.com/data/icons/entypo/91/arrow56-512.png) no-repeat calc(100% - 10px) center;
+  background-size: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.accordion .card h2.collapsed {
+  background-image: url(https://cdn0.iconfinder.com/data/icons/arrows-android-l-lollipop-icon-pack/24/expand2-256.png);
+}
+.accordion .card-body {
+  padding: 8px 4px 8px 4px ;
+ 
+}
+
+.border {
+    border: 1px solid #ddd;
+  
+
+}
+.h2{
+  margin-top:1px;
+}
+.h1{
+    padding: 5px 7px;
+    background: #cdcdcd;
+    font-size:18px ;
+    color: #000;
+    text-align: center;
+    margin-top:1px;
+}
+
+.card-head {
+   background-color: #f5f5f5;
+   height: 40px;
+   border-bottom: 1px solid #ccc;
+   
+}
+.text {
+   padding: 10px 11px 10px 10px;
+}
+.selection {
+   width: 245px;
+   height: 25px;
+}
+
+.range-slider {
+  width: 243px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  height: 6em;
+}
+.range-slider svg,
+.range-slider input[type=range] {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+input[type=number] {
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 1em;
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type=number]:invalid,
+input[type=number]:out-of-range {
+  border: 2px solid #ff6347;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #2497e3;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #2497e3;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #2497e3;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #2497e3;
+  border-radius: 1px;
+  box-shadow: none;
+  border: 0;
+}
+input[type=range]::-webkit-slider-thumb {
+  z-index: 2;
+  position: relative;
+  box-shadow: 0px 0px 0px #000;
+  border: 1px solid #2497e3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #a1d0ff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #2497e3;
+  border-radius: 1px;
+  box-shadow: none;
+  border: 0;
+}
+input[type=range]::-moz-range-thumb {
+  z-index: 2;
+  position: relative;
+  box-shadow: 0px 0px 0px #000;
+  border: 1px solid #2497e3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #a1d0ff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower,
+input[type=range]::-ms-fill-upper {
+  background: #2497e3;
+  border-radius: 1px;
+  box-shadow: none;
+  border: 0;
+}
+input[type=range]::-ms-thumb {
+  z-index: 2;
+  position: relative;
+  box-shadow: 0px 0px 0px #000;
+  border: 1px solid #2497e3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #a1d0ff;
+  cursor: pointer;
+}
+    ul{
+  list-style:none;
+}
+.side-nav-categories {
+    padding: 0px;
+    position: relative;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    background-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #f5f5f5 #eee #d5d5d5 #eee;
+    box-shadow: 0 5px 0 rgba(200,200,200,.2);
+    margin-bottom: 30px;
+    width: 250px;
+    margin: auto;
+    top: 100px;
+}
+
+.title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    padding: 12px 25px 10px 25px;
+    position: relative;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background: #ed6663;
+    margin-top: 0px;
+    margin-left: -10px;
+}
+
+.title:before {
+    content: '\f0c9';
+    font-family: FontAwesome;
+}
+
+.title:after {
+    content: "";
+    height: 1px;
+    width: 1px;
+    border-style: solid;
+    border-width: 5px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-color: #d95451 #d95451 transparent transparent;
+}
+
+.card-body ul#category-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+}
+
+  ul#category-tabs li {
+    display: block;
+    position: relative;
+    margin: 0;
+    border-bottom: 1px #ececec solid;
+    padding: 10px 18px;
+}
+.card-body  ul.sub-category-tabs li {
+    padding: 2px  !important;
+     display: none;
+}
+.card-body  ul.sub-category-tabs li {
+    border-bottom: 0px !important;
+}
+
+.card-body  ul#category-tabs li a {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.card-body  ul#category-tabs:first-child {
+  margin-top:10px;
+}
+
+.card-body  ul#category-tabs li a i {
+    /*top: 12px;*/
+    right: 18px;
+    position: absolute;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    padding: 2px;
+    color: #337ab7;
+}
+
+.card-body ul.list-group li.list-group-item{
+  border: none!important;
+}
+
+
+
+/*Checkboxes styles*/
+input[type="checkbox"] { display: none; }
+
+input[type="checkbox"] + label {
+display: block;
+position: relative;
+padding-left: 35px;
+/*margin-bottom: 20px;*/
+/*font: 14px/20px 'Open Sans', Arial, sans-serif;color: #ddd;*/
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+content: '';
+display: block;
+width: 20px;
+height: 20px;
+border: 1px solid #6cc0e5;
+position: absolute;
+left: 0;
+top: 0;
+opacity: .6;
+-webkit-transition: all .12s, border-color .08s;
+transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+width: 10px;
+top: -5px;
+left: 5px;
+border-radius: 0;
+opacity: 1;
+border-top-color: transparent;
+border-left-color: transparent;
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+}

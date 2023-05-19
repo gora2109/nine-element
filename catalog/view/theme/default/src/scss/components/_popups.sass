@@ -1,0 +1,75 @@
+$popupBackgroundColor: $colorTertiary
+$popupPadding: 32px 32px 16px
+$popupWidthContainer: 1024px
+$popupWidthContainerMiddle: 768px
+$popupWidthContainerTiny: 480px
+$popupWrapBackgroundColor: rgba(0, 0, 0, 0.4)
+.popup
+  cursor: auto
+  min-width: 320px
+  padding: $popupPadding
+  width: $popupWidthContainer
+  visibility: hidden
+  opacity: 0
+  box-shadow: 0 16px 24px rgba(2, 21, 51, 0.1)
+  background-color: $popupBackgroundColor
+  z-index: 111
+  margin: auto
+  display: none
+  &.active
+    visibility: visible
+    opacity: 1
+    display: block
+  // Попап Средней Ширины
+  &.popup-full
+    width: 100%
+    min-height: 100%
+  &.popup-middle
+    width: $popupWidthContainerMiddle
+  // Попап Малой Ширины
+  &.popup-tiny
+    width: $popupWidthContainerTiny
+  &.popup-middle,
+  &.popup-tiny
+    @include mediaMaxWidthTabMobile
+      max-height: 100%
+      height: 100%
+      width: 100%
+  &-open
+    overflow: hidden
+  &-init
+    cursor: pointer
+  &-wrap
+    position: fixed
+    top: 0
+    left: 0
+    cursor: pointer
+    width: 100%
+    height: 100%
+    z-index: 200
+    background-color: $popupWrapBackgroundColor
+    @include transition-long
+    visibility: hidden
+    opacity: 0
+    overflow: auto
+    display: flex
+  &-visible
+    .popup-wrap
+      visibility: visible
+      opacity: 1
+
+  &-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 24px
+    padding-bottom: 16px
+    border-bottom: 1px solid $colorTertiaryLight
+    .popup-remove
+      margin-left: auto
+    &__title
+      margin-right: 24px
+      & > *
+        margin-bottom: 0
+  &-content
+    margin-bottom: 16px

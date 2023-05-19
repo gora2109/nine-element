@@ -1,0 +1,252 @@
+.simple
+  &-section
+    padding-top: 293px
+    @include mediaMaxWidthTabMobile
+      padding-top: 150px
+    .simple
+      &-content
+        .checkout
+          &-heading
+            background-color: transparent
+            padding: 0
+            margin-bottom: 24px
+            border: none
+            font-size: $mainFontSize + 2
+            line-height: $mainLineHeight + 1
+            font-weight: $mainFontWeigth + 300
+            text-transform: uppercase
+        .simplecheckout
+          &-block
+            &#simplecheckout_shipping_address
+              .checkout
+                &-heading
+                  margin-bottom: 42px
+            &#simplecheckout_shipping
+              .checkout
+                &-heading
+                  margin-bottom: 42px
+            &#simplecheckout_payment
+              .checkout
+                &-heading
+                  margin-bottom: 25px
+            &#simplecheckout_cart
+              .checkout
+                &-heading
+                  margin-bottom: 42px
+.checkout
+  &-description
+    &__title
+      font-size: $mainFontSize
+      line-height: $mainLineHeight - 2
+      font-weight: $mainFontWeigth + 300
+      color: #000
+      margin-bottom: 7px
+    &__attribute
+      color: #BFBABA
+      font-size: $mainFontSize - 2
+      line-height: $mainLineHeight - 4
+      font-weight: $mainFontWeigth + 100
+      margin-bottom: 7px
+    .options
+      ul
+        list-style-type: none
+        margin: 0
+        li
+          font-size: $mainFontSize - 4
+          line-height: $mainLineHeight - 8
+          font-weight: $mainFontWeigth + 100
+          margin-bottom: 0
+    .quantity
+      background-color: #E5E3DF
+      margin-right: 20px
+      &-container
+        margin-top: 30px
+      .form-control
+        border: none
+        padding: 10px
+        font-size: $mainFontSize - 2
+        line-height: $mainLineHeight - 4
+        font-weight: $mainFontWeigth + 100
+        color: #000
+      .input-group-btn
+        .btn
+          font-size: $mainFontSize - 2
+          line-height: $mainLineHeight - 4
+          font-weight: $mainFontWeigth + 100
+          color: #000000
+          padding: 10px
+          border: none
+          &:hover
+            color: #ffffff
+      &-container
+        display: flex
+        align-items: center
+        @include mediaMaxWidthMobile
+          flex-direction: column
+          align-items: flex-start
+      &-title
+        font-size: $mainFontSize - 2
+        line-height: $mainLineHeight - 4
+        font-weight: $mainFontWeigth + 100
+        color: #000
+        margin-right: 20px
+    .price
+      font-size: $mainFontSize - 2
+      line-height: $mainLineHeight - 4
+      font-weight: $mainFontWeigth + 100
+      color: #000
+      &-old
+        font-size: $mainFontSize - 4
+        line-height: $mainLineHeight - 8
+  &-table
+    margin-bottom: 75px
+    &__item
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      position: relative
+      &:not(:last-child)
+        margin-bottom: 30px
+    &__remove
+      position: absolute
+      top: 0
+      right: 0
+    &__image
+      width: 120px
+      height: 120px
+      border-style: dashed
+      border-width: 0 2px 2px 0
+      border-color: #E5E3DF
+      a
+        display: block
+    &__info
+      max-width: calc(100% - 120px)
+      width: 100%
+      padding-left: 30px
+    &__remove
+      .btn
+        padding: 0
+        background-color: transparent
+        border: none
+        width: 17px
+        height: 17px
+        position: relative
+        &:before,
+        &:after
+          content: ''
+          width: 100%
+          height: 1px
+          top: calc(50% - 1px/2)
+          background-color: #000
+          left: 0
+          display: block
+          position: absolute
+          @include transition
+        &:hover
+          &:before,
+          &:after
+            background-color: #BFBABA
+        &:before
+          transform: rotate(-45deg)
+        &:after
+          transform: rotate(45deg)
+    &__container
+      .simplecheckout
+        &-cart
+          &-total
+            border: none
+            text-align: left
+            &.input-group
+              display: flex
+              align-items: center
+              margin-bottom: 32px
+              padding: 0
+              @include mediaMaxWidthMobile
+                flex-direction: column
+            .inputs
+              //&:not(.buttons)
+              width: 100%
+              margin-right: 0 !important
+              input
+                max-width: 100%
+                padding: 25px 28px
+                font-size: $mainFontSize - 2
+                line-height: $mainLineHeight - 4
+                font-weight: $mainFontWeigth + 100
+                @include mediaMinWidthMobile
+                  border-right-width: 0
+            .btn
+              padding: 25px 28px
+              width: 248px
+              font-size: $mainFontSize
+              line-height: $mainLineHeight - 2
+              font-weight: $mainFontWeigth + 300
+              border: #BFBABA
+              background-color: #BFBABA
+              color: #000000
+              @include mediaMaxWidthMobile
+                width: 100%
+              &:hover
+                border: #000000
+                background-color: #000000
+                color: #ffffff
+            &-price
+              font-size: $mainFontSize - 2
+              line-height: $mainLineHeight - 4
+              font-weight: $mainFontWeigth + 100
+              color: #000000
+              padding: 0
+              display: flex
+              align-items: center
+              justify-content: space-between
+              .simplecheckout-cart-total-value
+                margin-left: auto
+              &:not(:last-child)
+                margin-bottom: 15px
+          &-buttons
+            @include mediaMaxWidthMobile
+              width: 100%
+  &-footer
+    display: flex
+    align-items: flex-end
+    @include mediaMaxWidthTabMobile
+      flex-direction: column
+    &-total
+      .total
+        margin-bottom: 36px
+        ul
+          margin: 0
+          list-style-type: none
+          li
+            font-size: $mainFontSize + 2
+            line-height: $mainLineHeight + 1
+            font-weight: $mainFontWeigth + 300
+            text-transform: uppercase
+            color: #000
+            display: flex
+            justify-content: space-between
+            &:not(:last-child)
+              display: none
+      &__block
+        max-width: 50%
+        width: 100%
+        border: 1px dashed #BFBABA
+        padding: 27px 53px
+        @include mediaMaxWidthTabMobile
+          padding: 0
+          border: none
+          max-width: 100%
+    .close-popup
+      max-width: 50%
+      width: 100%
+      font-size: $mainFontSize
+      line-height: $mainLineHeight - 2
+      font-weight: $mainFontWeigth + 100
+      color: #231F20
+      text-align: center
+      text-decoration: underline
+      margin-bottom: 32px
+      &:hover
+        text-decoration: none
+      @include mediaMaxWidthTabMobile
+        max-width: 100%

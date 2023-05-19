@@ -1,0 +1,41 @@
+$iconWidth: 16px
+$iconHeight: $iconWidth
+$iconPosition: 12px
+.icon
+  width: $iconWidth
+  height: $iconHeight
+  background-repeat: no-repeat
+  background-size: contain
+  display: inline-block
+  @include transition
+  &-text
+    display: flex
+    align-items: center
+    .icon
+      margin-right: 8px
+.label
+  &-icon
+    position: relative
+    .icon
+      position: absolute
+      top: calc(50% - ($iconHeight/2))
+      left: auto
+      right: $iconPosition
+    &-position
+      &-right
+        left: auto
+        right: $iconPosition
+      &-left
+        right: auto
+        left: $iconPosition
+    @include mediaMaxWidthTabMobile
+      .icon
+        top: calc(50% - 10px)
+        right: 8px
+      &-position
+        &-right
+          left: auto
+          right: 8px
+        &-left
+          right: auto
+          left: 8px

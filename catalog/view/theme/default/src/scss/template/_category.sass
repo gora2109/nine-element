@@ -1,0 +1,360 @@
+.category
+  &-list
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -10px
+  &-item
+    width: 100%
+    padding: 10px
+    @include mediaMinWidthTabMobile
+      max-width: 50%
+    @include mediaMinWidthTablet
+      max-width: 25%
+      &:nth-child(3),
+      &:nth-child(5)
+        max-width: 50%
+
+  &-link
+    height: 395px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    padding: 29px 21px
+    display: flex
+    align-items: flex-end
+    text-transform: uppercase
+    color: #E5E3DF
+    font-size: $mainFontSize + 2
+    line-height: $mainLineHeight
+    font-weight: $mainFontWeigth + 100
+.catalog
+  &-top
+    margin-bottom: 69px
+    padding: 0 15px
+  &-list
+    padding: 0 20px
+    ul
+      list-style-type: none
+      margin: 0 -10px
+      display: flex
+      flex-wrap: wrap
+      li
+        font-size: $mainFontSize + 2
+        line-height: $mainLineHeight + 1
+        font-weight: $mainFontWeigth + 200
+        color: #252C32
+        margin: 7px 10px
+        a
+          color: #252C32
+          @include transition
+          &:hover,
+          &.active
+            color: #CFBBAF
+    @include mediaMinWidthTabMobile
+      border-left: 2px dashed #CFBBAF
+      padding-left: 40px
+      ul
+        margin: 0 -20px
+        li
+          margin: 7px 20px
+  &-filter
+    display: block
+    margin-bottom: 88px
+    .ocf
+      &-header
+        @include mediaMinWidthTabMobile
+          display: none
+        &-btn
+          @include mediaMinWidthTabMobile
+            display: flex
+            align-items: center
+          .ocf
+            &-btn
+              font-size: $mainFontSize
+              line-height: $mainLineHeight - 2
+              font-weight: $mainFontWeigth + 100
+              margin-right: 10px
+              color: #000
+              &:disabled
+                color: #777
+              &-cancel
+                font-weight: $mainFontWeigth + 300
+                &.btn
+                  &-icon
+                    .icon
+                      background-image: url("../image/filter.png")
+                      width: 14px
+                      height: 14px
+                      display: block
+                  &-group
+                    display: flex !important
+              &-search
+                padding: 10px 30px
+                color: #ffffff
+                background-color: #202631
+                border: 1px solid #202631
+                &:hover
+                  &:not(:disabled)
+                    background-color: #ffffff
+                    color: #202631
+                &:disabled
+                  color: #ffffff
+                  background-color: #777
+                  border-color: #777
+      &-footer
+        .ocf
+          &-between
+            flex-direction: column-reverse
+            align-items: center
+            .ocf-btn
+              margin-right: 0
+          &-btn
+            font-size: $mainFontSize
+            line-height: $mainLineHeight - 2
+            font-weight: $mainFontWeigth + 100
+            margin-right: 10px
+            color: #000
+            &:disabled
+              color: #777
+            &-cancel
+              font-weight: $mainFontWeigth + 300
+              &.btn
+                &-icon
+                  .icon
+                    background-image: url("../image/filter.png")
+                    width: 14px
+                    height: 14px
+                    display: block
+
+                &-group
+                  display: flex !important
+            &-search
+              padding: 10px 30px
+              color: #ffffff
+              background-color: #202631
+              border: 1px solid #202631
+              &:hover
+                &:not(:disabled)
+                  background-color: #ffffff
+                  color: #202631
+              &:disabled
+                color: #ffffff
+                background-color: #777
+                border-color: #777
+      &-container
+      &-body
+        display: block
+      &-filter
+        @include mediaMinWidthTabMobile
+          max-width: 25%
+          @include mediaMaxWidthDesktop
+            max-width: 33.33%
+        &__block
+          width: 100%
+          @include mediaMinWidthTabMobile
+            max-width: 25%
+            .ocf
+              &-filter
+                max-width: 100%
+            @include mediaMaxWidthDesktop
+              max-width: 66.67%
+              display: flex
+              flex-wrap: wrap
+              .ocf
+                &-filter
+                  max-width: 50%
+
+        &-list
+        &-body
+          @include mediaMinWidthTabMobile
+            margin-bottom: 31px
+        &-header
+          font-size: $mainFontSize
+          line-height: $mainLineHeight - 2
+          font-weight: $mainFontWeigth + 300
+          color: #252C32
+          @include mediaMinWidthTabMobile
+            background-color: transparent !important
+            border-radius: 0 !important
+            padding: 0 17px !important
+          .ocf
+            &-active
+              &-label
+                display: none !important
+            &-filter
+              &-name
+                color: #252C32
+                display: block !important
+          &-append
+            display: none
+      &-value
+        &-list
+          @include mediaMinWidthTabMobile
+            display: block !important
+            position: static !important
+            min-width: auto !important
+            box-shadow: none !important
+            background-color: transparent !important
+            padding-top: 8px !important
+            margin-top: 0 !important
+          .ocf
+            &-input
+              &-group
+                &-addon
+                  display: none
+            &-btn
+              &-show
+                &-values
+                  color: #252C32
+                  font-size: $mainFontSize
+                  line-height: $mainLineHeight - 2
+                  font-weight: $mainFontWeigth + 300
+                  text-decoration: underline
+                  @include transition
+                  &:hover
+                    text-decoration: none
+                  .ocf
+                    &-icon
+                      display: none
+            &-collapse
+              &-value
+               .ocf
+                  &-value
+                    &-list
+                      border-top: none !important
+                      padding-top: 0 !important
+                      &-body
+                        padding-top: 6px
+
+          &-body
+            .ocf
+              &-value
+                &-input
+                  &-checkbox,
+                  &-radio
+                    &:before
+                      border-color: #B0BABF
+                    &:after
+                      filter: none !important
+                  &-checkbox
+                    &:before
+                      border-radius: 0
+                  &-radio
+                    &:after
+                      width: 12px
+                      height: 12px
+                      left: 2px
+                      top: 2px
+                      border-radius: 50%
+
+                &:not(.ocf-disabled):active
+                  .ocf
+                    &-value
+                      &-input
+                        &-checkbox,
+                        &-radio
+                          &:before
+                            box-shadow: none
+                            background-color: rgba(176, 186, 191, .4)
+                &.ocf-selected
+                  .ocf
+                    &-value
+                      &-input
+                        &-checkbox
+                          &:after
+                            background-color: #B0BABF
+                        &-radio
+                          &:after
+                            background-image: none
+                            background-color: #B0BABF
+                &-name
+                  color: #252C32
+                  font-size: $mainFontSize
+                  line-height: $mainLineHeight - 2
+                  font-weight: $mainFontWeigth + 100
+          .ocf
+            &-input
+              &-group
+                display: flex
+                margin: 0 -6px
+
+            &-form
+              &-control
+                margin: 0 6px
+                border: 1px solid #DDE2E4
+                padding: 7px 12px
+                color: #9AA6AC
+                font-size: $mainFontSize - 4
+                line-height: $mainLineHeight - 7
+                font-weight: $mainFontWeigth + 100
+        &-scale
+          .ocf-noUi-pips
+            padding-top: 8px
+            height: 25px
+            .ocf-noUi-marker,
+            .ocf-noUi-value
+              display: none
+            .ocf-noUi-marker:first-child + .ocf-noUi-value,
+            .ocf-noUi-value:last-child
+              display: block
+            .ocf-noUi-value
+              color: #BDBDBD
+              font-family: $mainFont
+              font-size: $mainFontSize - 4
+              line-height: $mainLineHeight - 7
+              font-weight: $mainFontWeigth + 100
+              margin-top: 0
+
+
+        &-slider
+          .ocf
+            &-noUi
+              &-handle
+                width: 10px
+                height: 10px
+                right: -5px
+                top: 4px
+                border: none
+                border-radius: 0
+                background-color: #202631
+              &-connect
+                &:before
+                  background-color: #202631
+              &-connect,
+              &-base
+                &:before
+                  height: 1px
+                  margin-top: -.5px
+      &-btn
+        &-mobile
+          &-fixed
+            .ocf-btn
+              background-color: #000
+  &-banner
+    padding: 50px 0
+    display: flex
+    align-items: flex-end
+    color: #E5E3DF
+    font-size: $mainFontSize
+    line-height: $mainLineHeight - 2
+    @include mediaMinWidthTabMobile
+      padding: 150px 0 115px
+  &-section
+    padding: 50px 0
+    .filter-title
+      display: flex
+      align-items: center
+      font-size: $mainFontSize + 8
+      line-height: $mainLineHeight
+      font-weight: $mainFontWeigth + 100
+    @include mediaMinWidthTabMobile
+      padding: 150px 0 146px
+  &-product
+    &-list
+      margin-bottom: 35px
+      .product-layout
+        @include mediaMaxWidthMobile
+          width: 100%
+    &-container
+      & > *:last-child
+        margin-bottom: 0

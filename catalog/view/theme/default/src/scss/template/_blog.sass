@@ -1,0 +1,237 @@
+.blog
+  &-banner
+    padding: 50px 0
+    display: flex
+    align-items: flex-end
+    color: #E5E3DF
+    font-size: $mainFontSize
+    line-height: $mainLineHeight - 2
+    position: relative
+    &:before
+      content: ''
+      background-image: url("../image/blog-banner-2.png")
+
+      width: 273px
+      height: 336px
+      position: absolute
+      bottom: 96px
+      right: 33px
+    .title
+      color: #E5E3DF
+    @include mediaMinWidthTabMobile
+      padding: 150px 0 115px
+  &-container
+    padding: 70px 0
+    background-color: #E5E3DF
+    .title
+      margin-bottom: 88px
+    .information
+      &-layout
+        margin-bottom: 20px
+      &-thumb
+        .image
+          margin-bottom: 16px
+          img
+            width: 100%
+        .title
+          font-family: $mainFont
+          margin-bottom: 10px
+          color: #000
+          font-size: $mainFontSize + 2
+          line-height: $mainLineHeight + 1
+        .date
+          font-size: $mainFontSize - 2
+          line-height: $mainLineHeight
+          margin-bottom: 5px
+    .blog
+      &-list
+        & + .show-more
+          margin-top: 68px
+          @include mediaMaxWidthDesktop
+            margin-top: 24px
+    .show-more
+      text-align: center
+      text-decoration: underline
+      font-weight: 500
+      line-height: $mainLineHeight - 2
+.instagram
+  &-container
+    padding: 145px 0 209px
+    .title
+      margin-bottom: 88px
+    @include mediaMaxWidthDesktop
+      padding: 100px 0
+      .title
+        margin-bottom: 44px
+  &-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: 0 -10px
+    .information
+      &-layout
+        max-width: calc(16.667% - 10px)
+        width: 100%
+        padding: 0 10px
+        margin-bottom: 10px
+        @include mediaMaxWidthDesktop
+          max-width: calc(33.334% - 10px)
+        @include mediaMaxWidthTabMobile
+          max-width: calc(50% - 10px)
+      &-thumb
+        position: relative
+        overflow: hidden
+        .caption
+          position: absolute
+          top: 0
+          bottom: 0
+          left: 0
+          right: 0
+          padding: 30px 30px
+          font-size: $mainFontSize - 4
+          line-height: $mainLineHeight - 7
+          display: flex
+          flex-direction: column
+          justify-content: center
+          background-color: rgba(229, 227, 223, 0.86)
+          @include transition
+          transform: translateY(-100%)
+        &:hover
+          .caption
+            transform: translateY(0)
+
+.blog
+  &-category
+    &-title
+      text-transform: uppercase
+      font-family: $mainFont
+      color: #202631
+      font-size: $mainFontSize + 2
+      line-height: $mainLineHeight + 1
+      font-weight: $mainFontWeigth + 300
+      margin-bottom: 30px
+      @include mediaMinWidthDesktop
+        margin-bottom: 60px
+    .information
+      &-layout
+        margin-bottom: 20px
+      &-thumb
+        border-radius: 0
+        border: none
+        padding: 0
+        margin-bottom: 0
+        .image
+          margin-bottom: 16px
+          img
+            width: 100%
+        .title
+          font-family: $mainFont
+          color: #000
+          font-size: $mainFontSize + 2
+          line-height: $mainLineHeight + 1
+          margin-bottom: 0
+        .date
+          font-size: $mainFontSize - 2
+          line-height: $mainLineHeight
+          margin-bottom: 5px
+        .wysiwyg
+          font-size: $mainFontSize - 2
+          line-height: $mainLineHeight - 4
+    &__col
+      .information
+        &-layout
+          margin-bottom: 30px
+        &-thumb
+          border-radius: 0
+          border: none
+          padding: 0
+          margin-bottom: 0
+          display: flex
+          justify-content: space-between
+          @include desktop
+            @include mediaMinWidthTabMobile
+              flex-direction: column
+          @include mediaMaxWidthMobile
+            flex-direction: column
+          .image
+            margin-bottom: 0
+            width: 220px
+            margin-right: 20px
+            img
+              width: 100%
+            @include desktop
+              @include mediaMinWidthTabMobile
+                width: 100%
+                margin-right: 0
+                margin-bottom: 20px
+            @include mediaMaxWidthMobile
+              width: 100%
+              margin-right: 0
+              margin-bottom: 20px
+          .caption
+            max-width: calc(100% - 220px)
+            width: 100%
+            @include desktop
+              @include mediaMinWidthTabMobile
+                max-width: 100%
+            @include mediaMaxWidthMobile
+              max-width: 100%
+          .title
+            font-family: $mainFont
+            color: #000
+            font-size: $mainFontSize
+            line-height: $mainLineHeight - 2
+            font-weight: $mainFontWeigth + 300
+            margin-bottom: 9px
+          .date
+            font-size: $mainFontSize - 2
+            line-height: $mainLineHeight
+            margin-bottom: 5px
+          @include desktop
+            @include mediaMinWidthTabMobile
+              .wysiwyg
+                display: none
+          @include mediaMaxWidthMobile
+            .wysiwyg
+              display: none
+  &-section
+    padding: 100px 0
+    @include mediaMinWidthDesktop
+      padding: 113px 0 146px
+    .blog
+      &-category
+        &__list
+          @include mediaMinWidthDesktop
+            margin-bottom: 58px
+            .information
+              &-layout
+                margin-bottom: 45px
+.blog
+  &-information
+    &__section
+      padding: 107px 0 155px
+      .post-info__list
+        margin-bottom: 30px
+        ul
+          margin: 0
+          list-style-type: none
+          display: flex
+          li
+            margin-right: 36px
+            color: #828282
+            font-size: $mainFontSize - 2
+            line-height: $mainLineHeight - 4
+            font-weight: $mainFontWeigth + 100
+      .back-to
+        a
+          font-size: $mainFontSize - 2
+          line-height: $mainLineHeight - 4
+          font-weight: $mainFontWeigth + 100
+          color: #BFBABA
+          text-decoration: underline
+      .information
+        &-image
+          width: 100%
+    &__title
+      margin-bottom: 35px
+      font-weight: $mainFontWeigth + 300

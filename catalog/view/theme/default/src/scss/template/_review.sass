@@ -1,0 +1,105 @@
+.review
+  &-list
+    margin-bottom: 122px
+    @include mediaMaxWidthDesktop
+      margin-bottom: 50px
+    .review
+      &-item
+        display: flex
+        &:not(:last-child)
+          margin-bottom: 24px
+        &__image
+          width: 121px
+          height: 121px
+          margin-right: 29px
+          img
+            width: 100%
+        &__description
+          max-width: calc(100% - 150px)
+          width: 100%
+        &__body
+          padding: 17px 0
+          font-size: $mainFontSize
+          line-height: $mainLineHeight - 2
+          font-weight: $mainFontWeigth + 100
+          color: #000
+      &-header
+        display: flex
+        justify-content: space-between
+        &__title
+          span
+            display: block
+            font-size: $mainFontSize
+            line-height: $mainLineHeight - 2
+            font-weight: $mainFontWeigth + 300
+            color: #000
+          a
+            display: block
+            font-size: $mainFontSize - 2
+            line-height: $mainLineHeight - 4
+            font-weight: $mainFontWeigth + 100
+            text-decoration: none
+            color: #BFBABA
+            @include transition
+            &:hover
+              color: #000
+        .star
+          display: block
+          .icon
+            width: 33px
+            height: 33px
+            stroke: #CFBBAF
+            &.active
+              fill: #CFBBAF
+          &s
+            display: flex
+            margin-left: 10px
+  &-form
+    .review
+      &-description
+        .h4
+          margin-bottom: 14px
+        p
+          font-size: $mainFontSize
+          line-height: $mainLineHeight - 2
+          font-weight: $mainFontWeigth + 100
+    textarea
+      height: 232px
+      padding: 18px 27px
+    .rating
+      &-stars
+        display: flex
+        &__list
+          display: flex
+          flex-direction: row-reverse
+        &__item
+          position: relative
+          width: 33px
+          height: 30px
+          cursor: pointer
+          input[type='radio']
+            opacity: 0
+            width: 33px
+            height: 30px
+          .icon
+            position: absolute
+            top: 0
+            left: 0
+            width: 33px
+            height: 30px
+            stroke: #CFBBAF
+            z-index: -1
+            &.active
+              fill: #CFBBAF
+              opacity: 0
+          &:hover,
+          &.checked
+            .icon
+              opacity: 0
+              &.active
+                opacity: 1
+            & ~ *
+              .icon
+                opacity: 0
+                &.active
+                  opacity: 1

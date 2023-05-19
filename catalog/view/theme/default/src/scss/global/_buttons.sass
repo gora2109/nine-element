@@ -1,0 +1,205 @@
+//Button colors
+$btnTextSize:$mainFontSize - 2
+$btnLineHeight:$mainLineHeight - 4px
+$btnPadding: 14px 16px
+$btnWeight: $mainFontWeigth + 100
+
+//Button Primary color
+$btnBorderColorPrimary: #000
+$btnBackgroundColorPrimary: transparent
+$btnTextColorPrimary: #000
+
+//Button Primary active color
+$btnBorderColorPrimaryActive: #000
+$btnBackgroundColorPrimaryActive: rgba(229, 227, 223, 0.8)
+$btnTextColorPrimaryActive: #000
+
+//Button Primary hover color
+$btnBorderColorPrimaryHover: #000
+$btnBackgroundColorPrimaryHover: #000
+$btnTextColorPrimaryHover: #fff
+
+//Button Primary disabled color
+$btnBorderColorPrimaryDisabled: $colorPrimaryLight
+$btnBackgroundColorPrimaryDisabled: $colorPrimaryLight
+$btnTextColorPrimaryDisabled: $colorTertiaryDark
+
+//Button Secondary color
+$btnBorderColorSecondary: #000
+$btnBackgroundColorSecondary: #000
+$btnTextColorSecondary: #fff
+
+//Button Secondary active color
+$btnBorderColorSecondaryActive: #000
+$btnBackgroundColorSecondaryActive: #000
+$btnTextColorSecondaryActive: #fff
+
+//Button Secondary hover color
+$btnBorderColorSecondaryHover: #000
+$btnBackgroundColorSecondaryHover: transparent
+$btnTextColorSecondaryHover: #000
+
+//Button Secondary disabled color
+$btnBorderColorSecondaryDisabled: $colorTertiaryLight
+$btnBackgroundColorSecondaryDisabled: $colorTertiary
+$btnTextColorSecondaryDisabled: $colorTertiaryLight
+
+//Button Tertiary color
+$btnBorderColorTertiary: transparent
+$btnBackgroundColorTertiary: transparent
+$btnTextColorTertiary: $colorPrimary
+
+//Button Tertiary active color
+$btnBorderColorTertiaryActive: $colorTertiaryLight
+$btnBackgroundColorTertiaryActive: $colorTertiaryLight
+$btnTextColorTertiaryActive: $colorPrimary
+
+//Button Tertiary hover color
+$btnBorderColorTertiaryHover: $colorTertiaryDark
+$btnBackgroundColorTertiaryHover: $colorTertiaryDark
+$btnTextColorTertiaryHover: $colorPrimary
+
+//Button Tertiary disabled color
+$btnBorderColorTertiaryDisabled: $colorTertiaryLight
+$btnBackgroundColorTertiaryDisabled: $colorTertiaryLight
+$btnTextColorTertiaryDisabled: $colorTertiary
+
+//Button styling
+.btn,
+button,
+input[type="submit"],
+input[type="reset"]
+  color: $btnTextColorPrimary
+  font-size: $btnTextSize
+  cursor: pointer
+  line-height: $btnLineHeight
+  padding: $btnPadding
+  border: 1px solid $btnBorderColorPrimary
+  text-decoration: none
+  display: inline-block
+  border-radius: 0
+  outline: none
+  font-weight: $btnWeight
+  text-align: center
+  margin: 0
+  appearance: none
+  background-color: $btnBackgroundColorPrimary
+  @include transition
+  //.icon
+  //  fill: $btnTextColorPrimary
+  &:hover
+    text-decoration: none
+    color: $btnTextColorPrimaryHover
+    background-color: $btnBackgroundColorPrimaryHover
+    border-color: $btnBorderColorPrimaryHover
+    //.icon
+    //  fill: $btnTextColorPrimaryHover
+  &:active
+    color: $btnTextColorPrimaryActive
+    background-color: $btnBackgroundColorPrimaryActive
+    border-color: $btnBorderColorPrimaryActive
+    //.icon
+    //  fill: $btnTextColorPrimaryActive
+  &:disabled
+    cursor: default
+    color: $btnTextColorPrimaryDisabled
+    border-color: $btnBorderColorPrimaryDisabled
+    background-color: $btnBackgroundColorPrimaryDisabled
+    //.icon
+    //  fill: $btnTextColorPrimaryDisabled
+  // Вторичная кнопка
+  &.btn_secondary
+    color: $btnTextColorSecondary
+    border-color: $btnBorderColorSecondary
+    background-color: $btnBackgroundColorSecondary
+    //.icon
+    //  fill: $btnBorderColorSecondary
+    &:hover
+      color: $btnTextColorSecondaryHover
+      border-color: $btnBorderColorSecondaryHover
+      background-color: $btnBackgroundColorSecondaryHover
+      //.icon
+      //  fill: $btnTextColorSecondaryHover
+    &:active
+      color: $btnTextColorSecondaryActive
+      border-color: $btnBorderColorSecondaryActive
+      background-color: $btnBackgroundColorSecondaryActive
+      //.icon
+      //  fill: $btnTextColorSecondaryActive
+    &:disabled
+      border-color: $btnBorderColorSecondaryDisabled
+      background-color: $btnBackgroundColorSecondaryDisabled
+      color: $btnTextColorSecondaryDisabled
+      //.icon
+      //  fill: $btnTextColorSecondaryDisabled
+  // Третичная кнопка
+  &.btn_tertiary
+    color: $btnTextColorTertiary
+    border-color: $btnBorderColorTertiary
+    background-color: $btnBackgroundColorTertiary
+    //.icon
+    //  fill: $btnTextColorTertiary
+    &:hover
+      color: $btnTextColorTertiaryActive
+      border-color: $btnBorderColorTertiaryHover
+      background-color: $btnBackgroundColorTertiaryHover
+      //.icon
+      //  fill: $btnTextColorTertiaryActive
+    &:active
+      color: $btnTextColorSecondaryActive
+      border-color: $btnBorderColorTertiaryActive
+      background-color: $btnBackgroundColorTertiaryActive
+      //.icon
+      //  fill: $btnTextColorSecondaryActive
+    &:disabled
+      color: $btnTextColorTertiaryDisabled
+      border-color: $btnBorderColorTertiaryDisabled
+      background-color: $btnBackgroundColorTertiaryDisabled
+      //.icon
+      //  fill: $btnTextColorTertiaryDisabled
+.btn
+  &-group
+    display: flex
+    align-items: center
+    justify-content: center
+    .btn-text
+      @include transition
+  &-icon
+    &-position
+      &__left
+        .icon
+          margin-right: 8px
+          &-block
+            margin-right: 12px
+            .icon
+              margin-right: 0
+          &:hover
+            .icon
+              margin-right: 16px
+              &-block
+                .icon
+                margin-right: 0
+      &__right
+        .icon
+          margin-left: 8px
+          &-block
+            margin-left: 12px
+            .icon
+              margin-left: 0
+          &:hover
+            .icon
+              margin-left: 16px
+              &-block
+                .icon
+                margin-left: 0
+    &.icon
+      width: 24px
+      height: 24px
+    &-block
+      display: flex
+      align-items: center
+      justify-content: center
+      @include transition
+  &-border
+    &-none
+      border: none !important

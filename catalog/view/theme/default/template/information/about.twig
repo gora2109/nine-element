@@ -1,0 +1,33 @@
+{{ header }}
+{#<div class="top-banner about-banner" style="background-image: url('catalog/view/theme/default/image/about-banner.jpg')">#}
+<div class="top-banner about-banner">
+    <div class="container about-banner__container">
+        <div class="about-banner__image">
+            <img src="catalog/view/theme/default/image/about-banner-2.png" alt="about-banner-2" title="about-banner-2">
+        </div>
+        <div class="about-banner__description wysiwyg">
+            <h3 class="h3">BORN IN UKRAINE WITH LOVE & BRAVERY</h3>
+        </div>
+    </div>
+</div>
+<div id="information-about" class="about-section">
+    {{ column_left }}
+    {{ content_top }}
+    {{ content_bottom }}
+    {{ column_right }}
+
+    {#<div class="row">
+        {% if column_left and column_right %}
+            {% set class = 'col-sm-6' %}
+        {% elseif column_left or column_right %}
+            {% set class = 'col-sm-9' %}
+        {% else %}
+            {% set class = 'col-sm-12' %}
+        {% endif %}
+        <div id="content" class="{{ class }}">
+#}{#            <h1>{{ heading_title }}</h1>#}{#
+
+        </div>
+        {{ column_right }}</div>#}
+</div>
+{{ footer }}

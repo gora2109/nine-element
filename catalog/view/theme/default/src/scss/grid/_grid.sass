@@ -1,0 +1,447 @@
+.grid
+  &-container
+    display: grid
+    display: -ms-grid
+    &__columns
+      &__1
+        -ms-grid-columns: 1fr
+        grid-template-columns: 1fr
+      &__2
+        -ms-grid-columns: 1fr 1rem 1fr
+        grid-template-columns: repeat(2, 1fr)
+      &__3
+        -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr
+        grid-template-columns: repeat(3, 1fr)
+      &__4
+        -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr
+        grid-template-columns: repeat(4, 1fr)
+      @include big-desktop
+        &__lg
+          &__1
+            -ms-grid-columns: 1fr
+            grid-template-columns: 1fr
+          &__2
+            -ms-grid-columns: 1fr 1rem 1fr
+            grid-template-columns: repeat(2, 1fr)
+          &__3
+            -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr
+            grid-template-columns: repeat(3, 1fr)
+          &__4
+            -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr
+            grid-template-columns: repeat(4, 1fr)
+      @include mediaMaxWidthDesktop
+        &__md
+          &__1
+            -ms-grid-columns: 1fr
+            grid-template-columns: 1fr
+          &__2
+            -ms-grid-columns: 1fr 1rem 1fr
+            grid-template-columns: repeat(2, 1fr)
+          &__3
+            -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr
+            grid-template-columns: repeat(3, 1fr)
+          &__4
+            -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr
+            grid-template-columns: repeat(4, 1fr)
+      @include mediaMaxWidthTabMobile
+        &__sm
+          &__1
+            -ms-grid-columns: 1fr
+            grid-template-columns: 1fr
+          &__2
+            -ms-grid-columns: 1fr 1rem 1fr
+            grid-template-columns: repeat(2, 1fr)
+          &__3
+            -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr
+            grid-template-columns: repeat(3, 1fr)
+          &__4
+            -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr
+            grid-template-columns: repeat(4, 1fr)
+      @include mediaMinWidthMobile
+        &__xs
+          &__1
+            -ms-grid-columns: 1fr
+            grid-template-columns: 1fr
+          &__2
+            -ms-grid-columns: 1fr 1rem 1fr
+            grid-template-columns: repeat(2, 1fr)
+          &__3
+            -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr
+            grid-template-columns: repeat(3, 1fr)
+          &__4
+            -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr
+            grid-template-columns: repeat(4, 1fr)
+    &__rows
+      &__1
+        -ms-grid-rows: 1fr
+        grid-template-rows: 1fr
+      &__2
+        -ms-grid-rows: 1fr 1rem 1fr
+        grid-template-rows: repeat(2, 1fr)
+      &__3
+        -ms-grid-rows: 1fr 1rem 1fr 1rem 1fr
+        grid-template-rows: repeat(3, 1fr)
+      &__4
+        -ms-grid-rows: 1fr 1rem 1fr 1rem 1fr 1rem 1fr
+        grid-template-rows: repeat(4, 1fr)
+      @include big-desktop
+        &__lg
+          &__1
+            -ms-grid-rows: 1fr
+            grid-template-rows: 1fr
+          &__2
+            -ms-grid-rows: 1fr 1rem 1fr
+            grid-template-rows: repeat(2, 1fr)
+          &__3
+            -ms-grid-rows: 1fr 1rem 1fr 1rem 1fr
+            grid-template-rows: repeat(3, 1fr)
+          &__4
+            -ms-grid-rows: 1fr 1rem 1fr 1rem 1fr 1rem 1fr
+            grid-template-rows: repeat(4, 1fr)
+      @include mediaMaxWidthDesktop
+        &__md
+          &__1
+            -ms-grid-rows: 1fr
+            grid-template-rows: 1fr
+          &__2
+            -ms-grid-rows: 1fr 1rem 1fr
+            grid-template-rows: repeat(2, 1fr)
+          &__3
+            -ms-grid-rows: 1fr 1rem 1fr 1rem 1fr
+            grid-template-rows: repeat(3, 1fr)
+          &__4
+            -ms-grid-rows: 1fr 1rem 1fr 1rem 1fr 1rem 1fr
+            grid-template-rows: repeat(4, 1fr)
+      @include mediaMaxWidthTabMobile
+        &__sm
+          &__1
+            -ms-grid-rows: 1fr
+            grid-template-rows: 1fr
+          &__2
+            -ms-grid-rows: 1fr 1rem 1fr
+            grid-template-rows: repeat(2, 1fr)
+          &__3
+            -ms-grid-rows: 1fr 1rem 1fr 1rem 1fr
+            grid-template-rows: repeat(3, 1fr)
+          &__4
+            -ms-grid-rows: 1fr 1rem 1fr 1rem 1fr 1rem 1fr
+            grid-template-rows: repeat(4, 1fr)
+      @include mediaMinWidthMobile
+        &__xs
+          &__1
+            -ms-grid-rows: 1fr
+            grid-template-rows: 1fr
+          &__2
+            -ms-grid-rows: 1fr 1rem 1fr
+            grid-template-rows: repeat(2, 1fr)
+          &__3
+            -ms-grid-rows: 1fr 1rem 1fr 1rem 1fr
+            grid-template-rows: repeat(3, 1fr)
+          &__4
+            -ms-grid-rows: 1fr 1rem 1fr 1rem 1fr 1rem 1fr
+            grid-template-rows: repeat(4, 1fr)
+  &-item
+    -ms-grid-columns: 1fr
+    -ms-grid-rows: 1fr
+    &__column
+      &__1
+        -ms-grid-column: 1
+        grid-column-start: 1
+      &__2
+        -ms-grid-column: 2
+        grid-column-start: 2
+      &__3
+        -ms-grid-column: 3
+        grid-column-start: 3
+      &__4
+        -ms-grid-column: 4
+        grid-column-start: 4
+      @include big-desktop
+        &__lg
+          &__1
+            -ms-grid-column: 1
+            grid-column-start: 1
+          &__2
+            -ms-grid-column: 2
+            grid-column-start: 2
+          &__3
+            -ms-grid-column: 3
+            grid-column-start: 3
+          &__4
+            -ms-grid-column: 4
+            grid-column-start: 4
+      @include mediaMinWidthDesktop
+        &__md
+          &__1
+            -ms-grid-column: 1
+            grid-column-start: 1
+          &__2
+            -ms-grid-column: 2
+            grid-column-start: 2
+          &__3
+            -ms-grid-column: 3
+            grid-column-start: 3
+          &__4
+            -ms-grid-column: 4
+            grid-column-start: 4
+      @include mediaMinWidthTabMobile
+        &__sm
+          &__1
+            -ms-grid-column: 1
+            grid-column-start: 1
+          &__2
+            -ms-grid-column: 2
+            grid-column-start: 2
+          &__3
+            -ms-grid-column: 3
+            grid-column-start: 3
+          &__4
+            -ms-grid-column: 4
+            grid-column-start: 4
+      @include mediaMinWidthMobile
+        &__xs
+          &__1
+            -ms-grid-column: 1
+            grid-column-start: 1
+          &__2
+            -ms-grid-column: 2
+            grid-column-start: 2
+          &__3
+            -ms-grid-column: 3
+            grid-column-start: 3
+          &__4
+            -ms-grid-column: 4
+            grid-column-start: 4
+      &__span
+        &__1
+          -ms-grid-column-span: 1
+          grid-column-start: span 1
+        &__2
+          -ms-grid-column-span: 2
+          grid-column-start: span 2
+        &__3
+          -ms-grid-column-span: 3
+          grid-column-start: span 3
+        &__4
+          -ms-grid-column-span: 4
+          grid-column-start: span 4
+        @include big-desktop
+          &__lg
+            &__1
+              -ms-grid-column-span: 1
+              grid-column-start: span 1
+            &__2
+              -ms-grid-column-span: 2
+              grid-column-start: span 2
+            &__3
+              -ms-grid-column-span: 3
+              grid-column-start: span 3
+            &__4
+              -ms-grid-column-span: 4
+              grid-column-start: span 4
+        @include mediaMaxWidthDesktop
+          &__md
+            &__1
+              -ms-grid-column-span: 1
+              grid-column-start: span 1
+            &__2
+              -ms-grid-column-span: 2
+              grid-column-start: span 2
+            &__3
+              -ms-grid-column-span: 3
+              grid-column-start: span 3
+            &__4
+              -ms-grid-column-span: 4
+              grid-column-start: span 4
+        @include mediaMaxWidthTabMobile
+          &__sm
+            &__1
+              -ms-grid-column-span: 1
+              grid-column-start: span 1
+            &__2
+              -ms-grid-column-span: 2
+              grid-column-start: span 2
+            &__3
+              -ms-grid-column-span: 3
+              grid-column-start: span 3
+            &__4
+              -ms-grid-column-span: 4
+              grid-column-start: span 4
+        @include mediaMinWidthMobile
+          &__xs
+            &__1
+              -ms-grid-column-span: 1
+              grid-column-start: span 1
+            &__2
+              -ms-grid-column-span: 2
+              grid-column-start: span 2
+            &__3
+              -ms-grid-column-span: 3
+              grid-column-start: span 3
+            &__4
+              -ms-grid-column-span: 4
+              grid-column-start: span 4
+    &__row
+      &__1
+        -ms-grid-row: 1
+        grid-row-start: 1
+      &__2
+        -ms-grid-row: 2
+        grid-row-start: 2
+      &__3
+        -ms-grid-row: 3
+        grid-row-start: 3
+      &__4
+        -ms-grid-row: 4
+        grid-row-start: 4
+      @include big-desktop
+        &__lg
+          &__1
+            -ms-grid-row: 1
+            grid-row-start: 1
+          &__2
+            -ms-grid-row: 2
+            grid-row-start: 2
+          &__3
+            -ms-grid-row: 3
+            grid-row-start: 3
+          &__4
+            -ms-grid-row: 4
+            grid-row-start: 4
+      @include mediaMinWidthDesktop
+        &__md
+          &__1
+            -ms-grid-row: 1
+            grid-row-start: 1
+          &__2
+            -ms-grid-row: 2
+            grid-row-start: 2
+          &__3
+            -ms-grid-row: 3
+            grid-row-start: 3
+          &__4
+            -ms-grid-row: 4
+            grid-row-start: 4
+      @include mediaMinWidthTabMobile
+        &__sm
+          &__1
+            -ms-grid-row: 1
+            grid-row-start: 1
+          &__2
+            -ms-grid-row: 2
+            grid-row-start: 2
+          &__3
+            -ms-grid-row: 3
+            grid-row-start: 3
+          &__4
+            -ms-grid-row: 4
+            grid-row-start: 4
+      @include mediaMinWidthMobile
+        &__xs
+          &__1
+            -ms-grid-row: 1
+            grid-row-start: 1
+          &__2
+            -ms-grid-row: 2
+            grid-row-start: 2
+          &__3
+            -ms-grid-row: 3
+            grid-row-start: 3
+          &__4
+            -ms-grid-row: 4
+            grid-row-start: 4
+      &__span
+        &__1
+          -ms-grid-row-span: 1
+          grid-row-start: span 1
+        &__2
+          -ms-grid-row-span: 2
+          grid-row-start: span 2
+        &__3
+          -ms-grid-row-span: 3
+          grid-row-start: span 3
+        &__4
+          -ms-grid-row-span: 4
+          grid-row-start: span 4
+        @include big-desktop
+          &__lg
+            &__1
+              -ms-grid-row-span: 1
+              grid-row-start: span 1
+            &__2
+              -ms-grid-row-span: 2
+              grid-row-start: span 2
+            &__3
+              -ms-grid-row-span: 3
+              grid-row-start: span 3
+            &__4
+              -ms-grid-row-span: 4
+              grid-row-start: span 4
+        @include mediaMaxWidthDesktop
+          &__md
+            &__1
+              -ms-grid-row-span: 1
+              grid-row-start: span 1
+            &__2
+              -ms-grid-row-span: 2
+              grid-row-start: span 2
+            &__3
+              -ms-grid-row-span: 3
+              grid-row-start: span 3
+            &__4
+              -ms-grid-row-span: 4
+              grid-row-start: span 4
+        @include mediaMaxWidthTabMobile
+          &__sm
+            &__1
+              -ms-grid-row-span: 1
+              grid-row-start: span 1
+            &__2
+              -ms-grid-row-span: 2
+              grid-row-start: span 2
+            &__3
+              -ms-grid-row-span: 3
+              grid-row-start: span 3
+            &__4
+              -ms-grid-row-span: 4
+              grid-row-start: span 4
+        @include mediaMinWidthMobile
+          &__xs
+            &__1
+              -ms-grid-row-span: 1
+              grid-row-start: span 1
+            &__2
+              -ms-grid-row-span: 2
+              grid-row-start: span 2
+            &__3
+              -ms-grid-row-span: 3
+              grid-row-start: span 3
+            &__4
+              -ms-grid-row-span: 4
+              grid-row-start: span 4
+  &-order
+    &_1
+      order: 1
+    &_2
+      order: 2
+    &_3
+      order: 3
+    &_4
+      order: 4
+    &_5
+      order: 5
+    &_6
+      order: 6
+    &_7
+      order: 7
+    &_8
+      order: 8
+    &_9
+      order: 9
+    &_10
+      order: 10
+    &_11
+      order: 11
+    &_12
+      order: 12
+

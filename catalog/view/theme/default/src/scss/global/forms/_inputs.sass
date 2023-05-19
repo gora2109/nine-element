@@ -1,0 +1,80 @@
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+textarea
+  background-color: $inputBackgroundColor
+  border: 1px dashed $inputBorderColor
+  border-radius: $inputBorderRadius
+  font-size: $inputSize
+  line-height: $inputLineHeight
+  padding: $inputPadding
+  color: $inputTextColor
+  width: 100%
+  height: auto
+  margin: 0
+  font-family: $mainFont
+  font-weight: $inputFontWeight
+  box-sizing: border-box
+  appearance: none
+  outline: none
+  @include transition
+  &:hover
+    border-color: $inputBorderColorHover
+    background-color: $inputBackgroundColorHover
+  &:focus
+    border-color: $inputBorderColorFocus
+    background-color: $inputBackgroundColorFocus
+  &:disabled
+    border-color: $inputBorderColorDisabled
+    background-color: $inputBackgroundColorDisabled
+    color: $inputTextColorDisabled
+  &.error
+    border-color: $inputBorderColorError
+textarea
+  width: 100%
+  height: 96px
+  resize: none
+
+// Ячейка формы
+.form
+  &-field
+    margin-bottom: $formFieldMarginBottom
+    .label-wrap
+      display: block
+      height: 100%
+    &__title
+      display: block
+      font-size: $formFieldTitleFontSize
+      line-height: $formFieldTitleLineHeight
+      margin-bottom: $formFieldTitleMarginBottom
+      cursor: pointer
+      color: $colorPrimary
+      @include transition
+      &:hover
+        color: $colorSecondary
+  &-field,
+  &-group
+    position: relative
+    margin-bottom: 20px
+
+  &-group
+    .error
+      &-label
+        top: calc(100% - $formFieldMarginBottom)
+// Сообщение об ошибке
+.error
+  &-label
+    color: $colorError
+    position: absolute
+    top: 100%
+    left: 0
+    font-size: $inputTextError
+    line-height: $inputLineHeightError
+    font-style: italic
+
+// placeholder
+input::-moz-placeholder,
+textarea::-moz-placeholder
+  color: $inputPlaceholder
